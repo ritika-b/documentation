@@ -270,11 +270,16 @@ module.exports = {
             url: '/docs/chainlink-vrf/',
           },
           { title: 'Get a Random Number', url: '/docs/get-a-random-number/' },
+<<<<<<< HEAD
           { title: 'API Reference', url: '/docs/chainlink-vrf-api-reference/' },
           {
             title: 'Security Considerations',
             url: '/docs/vrf-security-considerations/',
           },
+=======
+          // { title: 'API Reference', url: '/docs/chainlink-vrf-api-reference/' },
+          { title: 'Security Considerations', url: '/docs/vrf-security-considerations/' },
+>>>>>>> Get a random number for VRF v2
           { title: 'Contract Addresses', url: '/docs/vrf-contracts/' },
           {
             title: 'Best Practices',

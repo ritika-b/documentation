@@ -3,7 +3,7 @@ layout: nodes.liquid
 section: smartContract
 date: Last Modified
 title: "VRF Security Considerations"
-permalink: "docs/vrf-security-considerations/"
+permalink: "docs/vrf-security-considerations/v1/"
 ---
 Gaining access to high quality randomness on-chain requires a solution like Chainlink's VRF, but it also requires you to understand some of the ways that randonmess generation can be manipulated by miners/validators. Here are some of the top security considerations you should review in your project.
 
@@ -65,10 +65,10 @@ Otherwise, the cryptoeconomic security properties may be violated by an attacker
 
 If your fulfillRandomness implementation reverts, the VRF service will not attempt to call it a second time. Make sure your contract logic does not revert. Consider simply storing the randomness and taking more complex follow-on actions in separate contract calls made by you or your users.
 
-> ✅ NOTE
+> ✅NOTE
 > If your implementation does revert, you can independently re-send the fullfilment transaction to ensure that all requests issued by your contract are fulfilled, but the VRF service won't do so on your behalf.)
 
-## Use `VRFConsumerBaseV2` in your contract, to interact with the VRF service
+## Use `VRFConsumerBase` in your contract, to interact with the VRF service
 
 `VRFConsumerBase` tracks important state which needs to be synchronized with the `VRFCoordinator` state. Some users fold `VRFConsumerBase` into their own contracts, but this means taking on significant extra conmplexity, so we advise against doing so.
 

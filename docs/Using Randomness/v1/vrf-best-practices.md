@@ -3,7 +3,7 @@ layout: nodes.liquid
 section: smartContract
 date: Last Modified
 title: "VRF Best Practices"
-permalink: "docs/chainlink-vrf-best-practices/"
+permalink: "docs/chainlink-vrf-best-practices/v1/"
 metadata: 
   title: "Chainlink VRF API Reference"
   description: "Best pracices for using Chainlink VRF."
@@ -20,16 +20,14 @@ If you need to generate a random number within a given range, you should use [mo
 ```solidity
 uint256 public randomResult;
 
-function fulfillRandomness(uint256 requestId, uint256[] randomness) internal override {
-    // Assuming only one random word was requested.
-    randomResult = (randomness[0] % 50) + 1;
+function fulfillRandomness(bytes32 requestId, uint256 randomness) internal override {
+    randomResult = (randomness % 50) + 1;
 }
 ```
 
 ## Getting multiple random numbers
 
-If you want to get multiple random numbers from a single VRF request, you can
-x request this directly.
+If you want to get multiple random numbers from a single VRF response, you should create an array where the `randomValue` is your original returned VRF number and `n` is the desired number of random numbers.
 
 ```solidity
 function expand(uint256 randomValue, uint256 n) public pure returns (uint256[] memory expandedValues) {
@@ -88,7 +86,7 @@ function getRandomNumber() public returns (bytes32 requestId) {
 }
 
 function fulfillRandomness(bytes32 requestId, uint256 randomness) internal override {
-    requestIdToRandomNumber[requestId] = randomness;
+    uint256 requestNumber = requestIdToRequestNumberIndex[requestId];
 }
 ```
 
