@@ -53,6 +53,12 @@ A simple example subscription with only one consumer who is also the subscriptio
 request config to be static, so each request uses the same parameters.
 
 ```solidity
+pragma solidity ^0.8.0;
+
+import "../path/to/LinkTokenInterface.sol";
+import "../path/to/VRFCoordinatorV2Interface.sol";
+import "../path/to/VRFConsumerBaseV2.sol";
+
 contract VRFConsumer is VRFConsumerBaseV2 {
 
     VRFCoordinatorV2Interface COORDINATOR;
@@ -66,6 +72,8 @@ contract VRFConsumer is VRFConsumerBaseV2 {
         bytes32 keyHash;
     }
     RequestConfig s_requestConfig;
+    uint256[] s_randomWords;
+    uint256 s_requestId;
 
     constructor(
         address vrfCoordinator,
@@ -75,12 +83,12 @@ contract VRFConsumer is VRFConsumerBaseV2 {
         uint32 numWords,
         bytes32 keyHash
     )
-        VRFConsumerBaseV2(vrfCoordinator)
+    VRFConsumerBaseV2(vrfCoordinator)
     {
         COORDINATOR = VRFCoordinatorV2Interface(vrfCoordinator);
         LINKTOKEN = LinkTokenInterface(link);
         s_requestConfig = RequestConfig({
-            subId: subId,
+            subId: 0, // Unset
             callbackGasLimit: callbackGasLimit,
             requestConfirmations: requestConfirmations,
             numWords: numWords,
@@ -92,47 +100,47 @@ contract VRFConsumer is VRFConsumerBaseV2 {
         uint256 requestId,
         uint256[] memory randomWords
     )
-        internal 
-        override
+    internal
+    override
     {
         s_randomWords = randomWords;
     }
-    
-    function requestRandomWords() 
-        external
+
+    function requestRandomWords()
+    external
     {
-        RequestConfig rc = s_requestConfig;
+        RequestConfig memory rc = s_requestConfig;
         // Will revert if subscription is not set and funded.
         s_requestId = COORDINATOR.requestRandomWords(
-            rc.keyHash, 
-            rc.subId, 
-            rc.requestConfirmations, 
-            rc.callbackGasLimit, 
+            rc.keyHash,
+            rc.subId,
+            rc.requestConfirmations,
+            rc.callbackGasLimit,
             rc.numWords);
-    }  
-    
+    }
+
     // Assumes this contract owns link
     function topUpSubscription(
         uint256 amount
-    ) 
-        external
+    )
+    external
     {
         LINKTOKEN.transferAndCall(
-            address(COORDINATOR), 
-            amount, 
+            address(COORDINATOR),
+            amount,
             abi.encode(s_requestConfig.subId));
     }
 
-    function unsubscribe() 
-        external
+    function unsubscribe()
+    external
     {
         // Returns funds to this address
         COORDINATOR.cancelSubscription(s_requestConfig.subId, address(this));
         s_requestConfig.subId = 0;
     }
 
-    function subscribe() 
-        external
+    function subscribe()
+    external
     {
         address[] memory consumers = new address[](1);
         consumers[0] = address(this);
