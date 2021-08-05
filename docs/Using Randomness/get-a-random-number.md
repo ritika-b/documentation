@@ -55,11 +55,11 @@ request config to be static, so each request uses the same parameters.
 ```solidity
 pragma solidity ^0.8.0;
 
-import "../path/to/LinkTokenInterface.sol";
-import "../path/to/VRFCoordinatorV2Interface.sol";
-import "../path/to/VRFConsumerBaseV2.sol";
+import "path/to/LinkTokenInterface.sol";
+import "path/to/VRFCoordinatorV2Interface.sol";
+import "path/to/VRFConsumerBaseV2.sol";
 
-contract VRFConsumer is VRFConsumerBaseV2 {
+contract VRFSingleConsumerExample is VRFConsumerBaseV2 {
 
     VRFCoordinatorV2Interface COORDINATOR;
     LinkTokenInterface LINKTOKEN;
@@ -100,14 +100,14 @@ contract VRFConsumer is VRFConsumerBaseV2 {
         uint256 requestId,
         uint256[] memory randomWords
     )
-    internal
-    override
+        internal
+        override
     {
         s_randomWords = randomWords;
     }
 
     function requestRandomWords()
-    external
+        external
     {
         RequestConfig memory rc = s_requestConfig;
         // Will revert if subscription is not set and funded.
@@ -123,7 +123,7 @@ contract VRFConsumer is VRFConsumerBaseV2 {
     function topUpSubscription(
         uint256 amount
     )
-    external
+        external
     {
         LINKTOKEN.transferAndCall(
             address(COORDINATOR),
@@ -132,7 +132,7 @@ contract VRFConsumer is VRFConsumerBaseV2 {
     }
 
     function unsubscribe()
-    external
+        external
     {
         // Returns funds to this address
         COORDINATOR.cancelSubscription(s_requestConfig.subId, address(this));
@@ -140,7 +140,7 @@ contract VRFConsumer is VRFConsumerBaseV2 {
     }
 
     function subscribe()
-    external
+        external
     {
         address[] memory consumers = new address[](1);
         consumers[0] = address(this);
@@ -161,7 +161,13 @@ In this example, the subscription for multiple consumers is managed by an extern
 
 
 ```solidity
-contract VRFConsumerExternalSubOwner is VRFConsumerBaseV2 {
+pragma solidity ^0.8.0;
+
+import "path/to/LinkTokenInterface.sol";
+import "path/to/VRFCoordinatorV2Interface.sol";
+import "path/to/VRFConsumerBaseV2.sol";
+
+contract VRFConsumerExternalSubOwnerExample is VRFConsumerBaseV2 {
 
     VRFCoordinatorV2Interface COORDINATOR;
     LinkTokenInterface LINKTOKEN;
@@ -174,6 +180,8 @@ contract VRFConsumerExternalSubOwner is VRFConsumerBaseV2 {
         bytes32 keyHash;
     }
     RequestConfig s_requestConfig;
+    uint256[] s_randomWords;
+    uint256 s_requestId;
 
     constructor(
         address vrfCoordinator,
@@ -183,11 +191,12 @@ contract VRFConsumerExternalSubOwner is VRFConsumerBaseV2 {
         uint32 numWords,
         bytes32 keyHash
     )
-        VRFConsumerBaseV2(vrfCoordinator)
+    VRFConsumerBaseV2(vrfCoordinator)
     {
         COORDINATOR = VRFCoordinatorV2Interface(vrfCoordinator);
         LINKTOKEN = LinkTokenInterface(link);
         s_requestConfig = RequestConfig({
+            subId: 0, // Initially unset
             callbackGasLimit: callbackGasLimit,
             requestConfirmations: requestConfirmations,
             numWords: numWords,
@@ -199,25 +208,30 @@ contract VRFConsumerExternalSubOwner is VRFConsumerBaseV2 {
         uint256 requestId,
         uint256[] memory randomWords
     )
-        external
+        internal
         override
     {
         s_randomWords = randomWords;
     }
-    
-    function requestRandomWords() 
+
+    function requestRandomWords()
+        external
     {
-        RequestConfig rc = s_requestConfig;
+        RequestConfig memory rc = s_requestConfig;
         // Will revert if subscription is not set and funded.
         s_requestId = COORDINATOR.requestRandomWords(
-            rc.keyHash, 
-            rc.subId, 
-            rc.requestConfirmations, 
-            rc.callbackGasLimit, 
+            rc.keyHash,
+            rc.subId,
+            rc.requestConfirmations,
+            rc.callbackGasLimit,
             rc.numWords);
-    }  
+    }
 
-    function setSubscriptionID(uint64 subId) {
+    function setSubscriptionID(
+        uint64 subId
+    )
+        public
+    {
         s_requestConfig.subId = subId;
     }
 }
