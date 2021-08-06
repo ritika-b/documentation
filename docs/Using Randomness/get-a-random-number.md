@@ -35,7 +35,7 @@ you can achieve significant gas savings.
 # Coordinator Parameters
 These parameters are configured by the coordinator owner, which currently is Chainlink itself until the threshold VRF is released. You can view their values
 by running `getConfig` on the coordinator contract (see [VRF Contracts](../vrf-contracts) for the coordinator address)
--`uint16 minimumRequestBlockConfirmations`
+-`uint16 minimumRequestBlockConfirmations` - A minimum number of confirmation blocks on VRF requests before oracles should respond. 
 -`uint32 fulfillmentFlatFeeLinkPPM`- The charge per request on top of the gas fees. Its flat fee specified in millionths of LINK.
 -`uint32 maxGasLimit` - The maximum gas limit supported for a fulfillRandomWords callback.
 -`uint32 stalenessSeconds` - How long we wait until we consider the ETH/LINK price (used for converting gas costs to LINK) is stale and use `fallbackWeiPerUnitLink`
