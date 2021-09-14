@@ -48,106 +48,11 @@ fluctuations in ETH/LINK price between request and fulfillment time.
 How you manage the subscription is up to you and depends on your randomness needs. Here are a few example configurations.
 
 ## Single consumer/subscription owner
+
 A simple example subscription with only one consumer who is also the subscription owner. It also sets the 
 request config to be static, so each request uses the same parameters.
 
-```solidity
-pragma solidity ^0.8.0;
-
-import "path/to/LinkTokenInterface.sol";
-import "path/to/VRFCoordinatorV2Interface.sol";
-import "path/to/VRFConsumerBaseV2.sol";
-
-contract VRFSingleConsumerExample is VRFConsumerBaseV2 {
-
-    VRFCoordinatorV2Interface COORDINATOR;
-    LinkTokenInterface LINKTOKEN;
-
-    struct RequestConfig {
-        uint64 subId;
-        uint32 callbackGasLimit;
-        uint16 requestConfirmations;
-        uint32 numWords;
-        bytes32 keyHash;
-    }
-    RequestConfig s_requestConfig;
-    uint256[] s_randomWords;
-    uint256 s_requestId;
-
-    constructor(
-        address vrfCoordinator,
-        address link,
-        uint32 callbackGasLimit,
-        uint16 requestConfirmations,
-        uint32 numWords,
-        bytes32 keyHash
-    )
-    VRFConsumerBaseV2(vrfCoordinator)
-    {
-        COORDINATOR = VRFCoordinatorV2Interface(vrfCoordinator);
-        LINKTOKEN = LinkTokenInterface(link);
-        s_requestConfig = RequestConfig({
-            subId: 0, // Unset
-            callbackGasLimit: callbackGasLimit,
-            requestConfirmations: requestConfirmations,
-            numWords: numWords,
-            keyHash: keyHash
-        });
-    }
-
-    function fulfillRandomWords(
-        uint256 requestId,
-        uint256[] memory randomWords
-    )
-        internal
-        override
-    {
-        s_randomWords = randomWords;
-    }
-
-    function requestRandomWords()
-        external
-    {
-        RequestConfig memory rc = s_requestConfig;
-        // Will revert if subscription is not set and funded.
-        s_requestId = COORDINATOR.requestRandomWords(
-            rc.keyHash,
-            rc.subId,
-            rc.requestConfirmations,
-            rc.callbackGasLimit,
-            rc.numWords);
-    }
-
-    // Assumes this contract owns link
-    function topUpSubscription(
-        uint256 amount
-    )
-        external
-    {
-        LINKTOKEN.transferAndCall(
-            address(COORDINATOR),
-            amount,
-            abi.encode(s_requestConfig.subId));
-    }
-
-    function unsubscribe()
-        external
-    {
-        // Returns funds to this address
-        COORDINATOR.cancelSubscription(s_requestConfig.subId, address(this));
-        s_requestConfig.subId = 0;
-    }
-
-    function subscribe()
-        external
-    {
-        address[] memory consumers = new address[](1);
-        consumers[0] = address(this);
-        s_requestConfig.subId = COORDINATOR.createSubscription(consumers);
-    }
-}
-``` 
-
+[Example code](https://github.com/smartcontractkit/chainlink/blob/develop/contracts/src/v0.8/tests/VRFSingleConsumerExample.sol)
 
 ## Multiple consumers, external subscription owner
 
@@ -158,84 +63,7 @@ In this example, the subscription for multiple consumers is managed by an extern
 1. Register all the applications `addConsumer(uint64 subId, address consumer)` . TODO: metamask screen shots
 1. Fund the subscription with `LINKTOKEN.transferAndCall(address(COORDINATOR), amount, abi.encode(subId));`
 
-
-```solidity
-pragma solidity ^0.8.0;
-
-import "path/to/LinkTokenInterface.sol";
-import "path/to/VRFCoordinatorV2Interface.sol";
-import "path/to/VRFConsumerBaseV2.sol";
-
-contract VRFConsumerExternalSubOwnerExample is VRFConsumerBaseV2 {
-
-    VRFCoordinatorV2Interface COORDINATOR;
-    LinkTokenInterface LINKTOKEN;
-
-    struct RequestConfig {
-        uint64 subId;
-        uint32 callbackGasLimit;
-        uint16 requestConfirmations;
-        uint32 numWords;
-        bytes32 keyHash;
-    }
-    RequestConfig s_requestConfig;
-    uint256[] s_randomWords;
-    uint256 s_requestId;
-
-    constructor(
-        address vrfCoordinator,
-        address link,
-        uint32 callbackGasLimit,
-        uint16 requestConfirmations,
-        uint32 numWords,
-        bytes32 keyHash
-    )
-    VRFConsumerBaseV2(vrfCoordinator)
-    {
-        COORDINATOR = VRFCoordinatorV2Interface(vrfCoordinator);
-        LINKTOKEN = LinkTokenInterface(link);
-        s_requestConfig = RequestConfig({
-            subId: 0, // Initially unset
-            callbackGasLimit: callbackGasLimit,
-            requestConfirmations: requestConfirmations,
-            numWords: numWords,
-            keyHash: keyHash
-        });
-    }
-
-    function fulfillRandomWords(
-        uint256 requestId,
-        uint256[] memory randomWords
-    )
-        internal
-        override
-    {
-        s_randomWords = randomWords;
-    }
-
-    function requestRandomWords()
-        external
-    {
-        RequestConfig memory rc = s_requestConfig;
-        // Will revert if subscription is not set and funded.
-        s_requestId = COORDINATOR.requestRandomWords(
-            rc.keyHash,
-            rc.subId,
-            rc.requestConfirmations,
-            rc.callbackGasLimit,
-            rc.numWords);
-    }
-
-    function setSubscriptionID(
-        uint64 subId
-    )
-        public
-    {
-        s_requestConfig.subId = subId;
-    }
-}
-```
-
+[Example code](https://github.com/smartcontractkit/chainlink/blob/develop/contracts/src/v0.8/tests/VRFConsumerExternalSubOwnerExample.sol)
 
 ## Advanced
 
