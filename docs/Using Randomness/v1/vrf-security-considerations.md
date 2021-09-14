@@ -70,6 +70,6 @@ If your fulfillRandomness implementation reverts, the VRF service will not attem
 
 ## Use `VRFConsumerBase` in your contract, to interact with the VRF service
 
-`VRFConsumerBase` tracks important state which needs to be synchronized with the `VRFCoordinator` state. Some users fold `VRFConsumerBase` into their own contracts, but this means taking on significant extra conmplexity, so we advise against doing so.
+`VRFConsumerBase` tracks important state which needs to be synchronized with the `VRFCoordinator` state. Some users fold `VRFConsumerBase` into their own contracts, but this means taking on significant extra complexity, so we advise against doing so.
 
 Along the same lines, don't override `rawFulfillRandomness`.
