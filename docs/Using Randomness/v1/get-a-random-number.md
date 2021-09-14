@@ -16,10 +16,10 @@ This page explains how to get a random number inside a smart contract using Chai
 
 # Random Number Consumer
 
-Chainlink VRF follows the [Request & Receive Data](../../request-and-receive-data/) cycle. To consume randomness, your contract should inherit from <a href="https://github.com/smartcontractkit/chainlink/blob/master/evm-contracts/src/v0.6/VRFConsumerBase.sol" target="_blank">`VRFConsumerBase`</a> and define two required functions
+Chainlink VRF follows the [Request & Receive Data](../../request-and-receive-data/) cycle. To consume randomness, your contract should inherit from <a href="https://github.com/smartcontractkit/chainlink/blob/master/evm-contracts/src/v0.6/VRFConsumerBase.sol" target="_blank">`VRFConsumerBase`</a> and define two required functions:
 
-1. `requestRandomness`, which makes the initial request for randomness.
-2. `fulfillRandomness`, which is the function that receives and does something with verified randomness.
+- `requestRandomness`, which makes the initial request for randomness.
+- `fulfillRandomness`, which is the function that receives and does something with verified randomness.
 
 The contract should own enough LINK to pay the specified fee. The beginner walkthrough explains how to [fund your contract](../../fund-your-contract/).
 

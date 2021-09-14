@@ -12,10 +12,10 @@ metadata:
 ---
 This page explains how to get a random number inside a smart contract using Chainlink VRF.
 
-The VRF is subscription-based. The subscription owner manages the subscription LINK balance as well as the set of 
-addresses (consumers) that are allowed to use that balance for VRF requests. The requests themselves follow the 
+Chainlink VRF is subscription-based. The subscription owner manages the subscription LINK balance as well as the set of 
+addresses (consumers) that are allowed to use that balance for VRF requests. The requests follow the 
 [Request & Receive Data](../../request-and-receive-data/) cycle. Upon fulfillment, the gas used to fulfill the request is calculated, converted
-to link using an ETH/LINK feed and charged to the subscription in addition to a flat per request fee (see `fulfillmentFlatFeeLinkPPM`). 
+to link using an ETH/LINK feed, and charged to the subscription including a flat per request fee. To learn more about the fee, see `fulfillmentFlatFeeLinkPPM` in the [Coordinator Parameters](#coordinator-parameters) list. 
 
 # Static Parameters 
 These parameters are the same for all VRF users. You can find the respective values for your network in the [VRF Contracts page](../vrf-contracts).
@@ -33,16 +33,15 @@ the random value is. It must be greater than the coordinators `minimumRequestBlo
 you can achieve significant gas savings. 
 
 # Coordinator Parameters
-These parameters are configured by the coordinator owner, which currently is Chainlink itself until the threshold VRF is released. You can view their values
-by running `getConfig` on the coordinator contract (see [VRF Contracts](../vrf-contracts) for the coordinator address)
--`uint16 minimumRequestBlockConfirmations` - A minimum number of confirmation blocks on VRF requests before oracles should respond. 
--`uint32 fulfillmentFlatFeeLinkPPM`- The charge per request on top of the gas fees. Its flat fee specified in millionths of LINK.
--`uint32 maxGasLimit` - The maximum gas limit supported for a fulfillRandomWords callback.
--`uint32 stalenessSeconds` - How long we wait until we consider the ETH/LINK price (used for converting gas costs to LINK) is stale and use `fallbackWeiPerUnitLink`
--`uint32 gasAfterPaymentCalculation` - How much gas is used outside of the payment calculation. Specifically its the gas outside of here (TODO link) and here (TODO link).
--`uint96 minimumSubscriptionBalance` - The minimum subscription balance required to make a request. Its set to be about 300% of the cost of a single request to handle
+These parameters are configured by the coordinator owner, which currently is Chainlink itself until the threshold VRF is released. You can view their values by running `getConfig` on the coordinator contract (see [VRF Contracts](../vrf-contracts) for the coordinator address).
+- `uint16 minimumRequestBlockConfirmations` - A minimum number of confirmation blocks on VRF requests before oracles should respond. 
+- `uint32 fulfillmentFlatFeeLinkPPM`- The charge per request on top of the gas fees. Its flat fee specified in millionths of LINK.
+- `uint32 maxGasLimit` - The maximum gas limit supported for a fulfillRandomWords callback.
+- `uint32 stalenessSeconds` - How long we wait until we consider the ETH/LINK price (used for converting gas costs to LINK) is stale and use `fallbackWeiPerUnitLink`
+- `uint32 gasAfterPaymentCalculation` - How much gas is used outside of the payment calculation. Specifically its the gas outside of here (TODO link) and here (TODO link).
+- `uint96 minimumSubscriptionBalance` - The minimum subscription balance required to make a request. Its set to be about 300% of the cost of a single request to handle
 fluctuations in ETH/LINK price between request and fulfillment time.
--`uint256 MAXIMUM_CONSUMERS` - A fixed maximum of 100 consumers per subscription. Use multiple separate subscriptions if you need more.
+- `uint256 MAXIMUM_CONSUMERS` - A fixed maximum of 100 consumers per subscription. Use multiple separate subscriptions if you need more.
 
 # Example Configurations
 
