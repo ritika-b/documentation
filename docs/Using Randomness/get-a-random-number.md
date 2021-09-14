@@ -52,7 +52,14 @@ How you manage the subscription is up to you and depends on your randomness need
 A simple example subscription with only one consumer who is also the subscription owner. It also sets the 
 request config to be static, so each request uses the same parameters.
 
-[Example code](https://github.com/smartcontractkit/chainlink/blob/develop/contracts/src/v0.8/tests/VRFSingleConsumerExample.sol)
+<div class="remix-callout">
+    <a href="https://remix.ethereum.org/#version=soljson-v0.8.6+commit.11564f7e.js&optimize=false&evmVersion=null&url=https://docs.chain.link/samples/VRF/VRFSingleConsumerExample.sol" target="_blank" class="cl-button--ghost solidity-tracked">Deploy this contract using Remix ↗</a>
+    <a href="../../deploy-your-first-contract/" title="">What is Remix?</a>
+</div>
+
+```solidity Kovan
+{% include samples/VRF/VRFSingleConsumerExample.sol %}
+```
 
 ## Multiple consumers, external subscription owner
 
@@ -63,7 +70,14 @@ In this example, the subscription for multiple consumers is managed by an extern
 1. Register all the applications `addConsumer(uint64 subId, address consumer)` . TODO: metamask screen shots
 1. Fund the subscription with `LINKTOKEN.transferAndCall(address(COORDINATOR), amount, abi.encode(subId));`
 
-[Example code](https://github.com/smartcontractkit/chainlink/blob/develop/contracts/src/v0.8/tests/VRFConsumerExternalSubOwnerExample.sol)
+<div class="remix-callout">
+    <a href="https://remix.ethereum.org/#version=soljson-v0.8.6+commit.11564f7e.js&optimize=false&evmVersion=null&url=https://docs.chain.link/samples/VRF/VRFConsumerExternalSubOwnerExample.sol" target="_blank" class="cl-button--ghost solidity-tracked">Deploy this contract using Remix ↗</a>
+    <a href="../../deploy-your-first-contract/" title="">What is Remix?</a>
+</div>
+
+```solidity Kovan
+{% include samples/VRF/VRFConsumerExternalSubOwnerExample.sol %}
+```
 
 ## Advanced
 
