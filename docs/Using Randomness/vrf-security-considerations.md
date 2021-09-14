@@ -12,7 +12,7 @@ Gaining access to high quality randomness on-chain requires a solution like Chai
 * [Do not re-request randomness, even if you don't get an answer right away](#do-not-re-request-randomness-even-if-you-dont-get-an-answer-right-away)
 * [Don't accept bids/bets/inputs after you have made a randomness request](#dont-accept-bidsbetsinputs-after-you-have-made-a-randomness-request)
 * [`fulfillRandomness` must not revert](#fulfillrandomness-must-not-revert)
-* [Use `VRFConsumerBase` in your contract, to interact with the VRF service](#use-vrfconsumerbase-in-your-contract-to-interact-with-the-vrf-service)
+* [Use `VRFConsumerBase` in your contract, to interact with the VRF service](#use-vrfconsumerbasev2-in-your-contract-to-interact-with-the-vrf-service)
 
 ## Use `requestId` to match randomness requests with their fulfillment in order
 
