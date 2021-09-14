@@ -29,17 +29,7 @@ function fulfillRandomness(uint256 requestId, uint256[] randomness) internal ove
 ## Getting multiple random numbers
 
 If you want to get multiple random numbers from a single VRF request, you can
-x request this directly.
-
-```solidity
-function expand(uint256 randomValue, uint256 n) public pure returns (uint256[] memory expandedValues) {
-    expandedValues = new uint256[](n);
-    for (uint256 i = 0; i < n; i++) {
-        expandedValues[i] = uint256(keccak256(abi.encode(randomValue, i)));
-    }
-    return expandedValues;
-}
-```
+request this directly with the `numWords` argument described [here](../../get-a-random-number/v1/#user-parameters) 
 
 ## Having multiple VRF requests in flight
 

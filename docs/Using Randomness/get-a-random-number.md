@@ -14,7 +14,7 @@ This page explains how to get a random number inside a smart contract using Chai
 
 Chainlink VRF is subscription-based. The subscription owner manages the subscription LINK balance as well as the set of 
 addresses (consumers) that are allowed to use that balance for VRF requests. The requests follow the 
-[Request & Receive Data](../../request-and-receive-data/) cycle. Upon fulfillment, the gas used to fulfill the request is calculated, converted
+[Request & Receive Data](../request-and-receive-data/) cycle. Upon fulfillment, the gas used to fulfill the request is calculated, converted
 to link using an ETH/LINK feed, and charged to the subscription including a flat per request fee. To learn more about the fee, see `fulfillmentFlatFeeLinkPPM` in the [Coordinator Parameters](#coordinator-parameters) list. 
 
 # Static Parameters 
@@ -58,7 +58,7 @@ request config to be static, so each request uses the same parameters.
 
 In this example, the subscription for multiple consumers is managed by an external account. Steps to set up this configuration:
 
-1. Create a subscription with no consumers `createSubscription()`. Make a note of the subscriptionId emitted in the `SubscriptionCreated` log. TODO: metamask screen shots
+1. Create a subscription with `createSubscription()`. Make a note of the subscriptionId emitted in the `SubscriptionCreated` log. TODO: metamask screen shots
 1. Deploy your applications which expose a `setSubscriptionId(uint64 subId)` like `VRFConsumerExternalSubOwner` does and record all their addresses. 
 1. Register all the applications `addConsumer(uint64 subId, address consumer)` . TODO: metamask screen shots
 1. Fund the subscription with `LINKTOKEN.transferAndCall(address(COORDINATOR), amount, abi.encode(subId));`
