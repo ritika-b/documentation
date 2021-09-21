@@ -91,19 +91,65 @@ This example uses [Web3.py](https://web3py.readthedocs.io/en/stable/) to retriev
 
 ## Getting a different price denomination
 
-Chainlink Data Feeds for asset prices can be used in combination to derive denominated price pairs in other currencies.
+Chainlink Price Feeds can be used in combination to derive denominated price pairs in other currencies.
 
-If you require a denomination other than what is provided, you can use two feeds to derive the pair that you need. For example, if you needed an BTC / EUR price, you could take the BTC / USD feed and the EUR / USD feed and derive BTC / EUR using [OpenZeppelin's SafeMath](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/utils/math/SafeMath.sol) division.
+If you require a denomination other than what is provided, you can use two price feeds to derive the pair that you need. For example, if you needed a BTC / EUR price, you could take the BTC / USD feed and the EUR / USD feed and derive BTC / EUR using division.
 
 ![Request Model Diagram](/images/price-feed-conversion-equation.gif)
 
+> 🚧 Important
+> 
+> If you are using a Solidity version before 0.8.0 use [OpenZeppelin's SafeMath](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/utils/math/SafeMath.sol) for division.
+
 
 ```solidity
-using SafeMath for uint256;
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.7;
 
-function derivedPrice(uint256 priceBTCUSD, uint256 priceEURUSD) public view returns (uint256) {
-    return div(priceBTCUSD, priceEURUSD);
-}
+import "@chainlink/contracts/src/v0.8/interfaces/AggregatorV3Interface.sol";
+
+contract DerivedPriceConsumerV3 {
+
+    AggregatorV3Interface internal priceFeedBtcUsd;
+    AggregatorV3Interface internal priceFeedEurUsd;
+    int public decimals;
+
+    /**
+     * Network: Kovan
+     * Aggregator: BTC/USD
+     * Address: 0x6135b13325bfC4B00278B4abC5e20bbce2D6580e
+     * Decimals: 8
+     * Aggregator: EUR/USD
+     * Address: 0x0c15Ab9A0DB086e062194c273CC79f41597Bbf13
+     * Decimals: 8
+     */
+    constructor() {
+        priceFeedBtcUsd = AggregatorV3Interface(0x6135b13325bfC4B00278B4abC5e20bbce2D6580e);
+        priceFeedEurUsd = AggregatorV3Interface(0x0c15Ab9A0DB086e062194c273CC79f41597Bbf13);
+        decimals = 10**8;
+    }
+
+    /*
+     * Returns the derived price
+     */
+    function getDerivedPrice() public view returns (int) {
+        (
+            uint80 roundIDBtcUsd, 
+            int priceBtcUsd,
+            uint startedAtBtcUsd,
+            uint timeStampBtcUsd,
+            uint80 answeredInRoundBtcUsd
+        ) = priceFeedBtcUsd.latestRoundData();
+        (
+            uint80 roundIDEurUsd, 
+            int priceEurUsd,
+            uint startedAtEurUsd,
+            uint timeStampEurUsd,
+            uint80 answeredInRoundEurUsd
+        ) = priceFeedEurUsd.latestRoundData();
+        return (priceBtcUsd * decimals) / priceEurUsd;
+    }
+ }
 ```
 
 ## How Do Data Feeds Get Their Data?
