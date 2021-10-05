@@ -5,7 +5,11 @@ date: Last Modified
 title: "The Basics: Using Data Feeds"
 permalink: "docs/beginners-tutorial/"
 excerpt: "Smart Contracts and Chainlink"
+<<<<<<< HEAD
 whatsnext: {"Get the Latest Price":"/docs/get-the-latest-price/", "Deploy your First Contract":"/docs/deploy-your-first-contract/", "Random Numbers Tutorial":"/docs/intermediates-tutorial/"}
+=======
+whatsnext: {"Get the Latest Price":"/docs/get-the-latest-price/", "Deploy your first contract":"/docs/deploy-your-first-contract/", "Random Numbers Tutorial":"/docs/intermediates-tutorial/"}
+>>>>>>> Remove hard-coded Solidity versions from Remix links.
 metadata:
   title: "The Basics Tutorial"
   description: "Learn what smart contracts are, how to write them, and how to use Chainlink data feeds to deploy your very own Chainlink smart contract."
@@ -47,7 +51,11 @@ Smart contracts can connect to real-world market prices of assets to produce pow
 
 # 2. What language is a smart contract written in?
 
+<<<<<<< HEAD
 The most popular language for writing smart contracts on Ethereum is [Solidity](https://docs.soliditylang.org/en/v0.8.7/). It was created by the Ethereum Foundation specifically for smart contract development and is constantly being updated.
+=======
+The most popular language for writing smart contracts on Ethereum is <a href="https://docs.soliditylang.org/en/v0.8.7/" target="_blank">Solidity</a>. It was created by the Ethereum Foundation specifically for smart contract development and is constantly being updated.
+>>>>>>> Remove hard-coded Solidity versions from Remix links.
 
 If you've ever written Javascript, Java, or other object-oriented scripting languages, Solidity should be easy to understand. Similar to object-oriented langauges, Solidity is considered to be a *contract*-oriented language.
 
@@ -73,7 +81,11 @@ contract HelloWorld {
 
 ## Define the Version of Solidity
 
+<<<<<<< HEAD
 The first thing that every Solidity file must have is the Solidity version definition. The version HelloWorld.sol is using is 0.8.7, defined by `pragma solidity 0.8.7;`
+=======
+The first thing that every solidity file must have is the Solidity version definition. The version HelloWorld.sol is using is 0.8.7, defined by `pragma solidity 0.8.7;`
+>>>>>>> Remove hard-coded Solidity versions from Remix links.
 
 You can see the latest versions of the Solidity compiler [here](https://github.com/ethereum/solc-bin/blob/gh-pages/bin/list.txt/?target=_blank). You may also notice Solidity files containing definitions with multiple versions of Solidity:
 
@@ -86,8 +98,12 @@ This means that the code is written for Solidity version 0.7.0, or a newer versi
 
 Next, the `HelloWorld` contract is defined by using the keyword `contract`. Think of this as being similar to declaring `class` in Javascript. The implementation of `HelloWorld` is inside this definition, denoted with curly braces.
 
+<<<<<<< HEAD
 ```solidity
 pragma solidity 0.8.7;
+=======
+Again, like Javascript, contracts can have state variables and local variables. To find out more about all the types of variables you can use within Solidity, check out the <a href="https://docs.soliditylang.org/en/v0.8.7/" target="_blank">Solidity documentation</a>.
+>>>>>>> Remove hard-coded Solidity versions from Remix links.
 
 contract HelloWorld {
 
@@ -195,7 +211,13 @@ The following code is from the [Get the Latest Price](../get-the-latest-price/) 
 {% include samples/PriceFeeds/PriceConsumerV3.sol %}
 ```
 
+<<<<<<< HEAD
 Notice how the code imports an interface called `AggregatorV3Interface`. In this case, `AggregatorV3Interface` defines that all V3 Aggregators will have the function `latestRoundData`. We can see all of the functions that a V3 Aggregator exposes in the[`AggregatorV3Interface` file on Github](https://github.com/smartcontractkit/chainlink/blob/master/contracts/src/v0.8/interfaces/AggregatorV3Interface.sol/).
+=======
+On the 3rd line, the code imports an interface called `AggregatorV3Interface`. An interface is another concept that will be familiar to programmers of other languages. Interfaces define functions without their implementation, leaving inheriting contracts to define the actual implementation themselves.
+
+Interfaces make it easier for calling contracts to know what functions to call. For example, in this case, `AggregatorV3Interface` defines that all V3 Aggregators will have the function `latestRoundData`. We can see all of the functions that a V3 Aggregator exposes in the <a href="https://github.com/smartcontractkit/chainlink/blob/master/contracts/src/v0.8/interfaces/AggregatorV3Interface.sol" target="_blank">`AggregatorV3Interface` file on Github.</a>
+>>>>>>> Remove hard-coded Solidity versions from Remix links.
 
 Our contract is initialized with the hard-coded address of the Kovan data feed for ETH / USD prices. Then in `getLatestPrice` it uses `latestRoundData` to obtain the most recent round of price data. We're interested in the price, so the function returns that.
 
@@ -210,7 +232,13 @@ There are a few things that are needed to deploy a contract to a testnet:
 
 We have the code. What we need next is a compiler.
 
+<<<<<<< HEAD
 ## The Remix IDE 
+=======
+## 7a. The Remix IDE
+
+- [ ] A Solidity compiler
+>>>>>>> Remove hard-coded Solidity versions from Remix links.
 
 [Remix](https://remix.ethereum.org/) is an online IDE which enables anyone to write, compile and deploy smart contracts from the browser.
 
@@ -218,20 +246,32 @@ Fortunately for us, Remix also has support for gist. This means that Remix can l
 
 <div class="remix-callout">
   <a href="https://remix.ethereum.org/#url=https://docs.chain.link/samples/PriceFeeds/PriceConsumerV3.sol" target="_blank" class="cl-button--ghost">Deploy this contract using Remix ↗</a>
+<<<<<<< HEAD
+=======
+  <a href="../deploy-your-first-contract/" title="">What is Remix?</a>
+>>>>>>> Remove hard-coded Solidity versions from Remix links.
 </div>
 
 ![Remix Select PriceConsumerV3.sol](/files/11d7052-Screenshot_2020-11-27_at_10.16.47.png)
 
 Get familiar with the layout of Remix and play around with the contract. This is what we'll use for the compiler.
 
+<<<<<<< HEAD
 - [x] Smart contract code
 - [x] A Solidity compiler
 - [ ] An address to deploy from
 - [ ] Some ETH
+=======
+- [x] A Solidity compiler
+>>>>>>> Remove hard-coded Solidity versions from Remix links.
 
 Now we need an address to deploy from.
 
+<<<<<<< HEAD
 ## Metamask Wallet
+=======
+- [ ] An address to deploy from
+>>>>>>> Remove hard-coded Solidity versions from Remix links.
 
 Contracts are deployed by addresses on the network, so to deploy our own we need an address. Not only that, but we need one which we can easily use with Remix. Fortunately, Metamask is just what is needed. **Metamask** allows anyone to create an address, store funds and interact with Ethereum compatible blockchains from a browser extension.
 
@@ -243,10 +283,14 @@ Once that's done, navigate to the Kovan testnet inside Metamask extension, as se
 
 We now have an address to deploy to the Kovan testnet from.
 
+<<<<<<< HEAD
 - [x] Smart contract code
 - [x] A Solidity compiler
 - [x] An address to deploy from
 - [ ] Some ETH
+=======
+- [x] An address to deploy from
+>>>>>>> Remove hard-coded Solidity versions from Remix links.
 
 We'll finally need to obtain ETH to deploy our smart contract to a testnet.
 

@@ -24,7 +24,11 @@ metadata:
 
 > 🚧 Note
 >
+<<<<<<< HEAD
 > The video uses a seed phrase to request randomness. This feature has been deprecated. Please refer to the code in this tutorial for the most up to date procedures.
+=======
+> The video uses a seed phrase to request randomness, this has been depreciated. Please use the code here.
+>>>>>>> Remove hard-coded Solidity versions from Remix links.
 
 
 # Overview <!-- omit in toc -->
@@ -54,7 +58,13 @@ Randomness, on the other hand, cannot be reference data. If the result of random
 
 # 3. What is the payment process for generating a random number?
 
+<<<<<<< HEAD
 In return for providing the service of generating a random number, oracles need to be paid in [**LINK**](../link-token-contracts/). This is paid by the contract which requests the randomness, and payment occurs during the request. 
+=======
+> 📘 ERC-677 Token Standard
+>
+> LINK conforms to the ERC-677 token standard, and extension of ERC-20. This standard is what enables data to be encoded in token transfers. This is integral to the Request and Receive cycle. [Click here](https://github.com/ethereum/EIPs/issues/677) to learn more about ERC-677.
+>>>>>>> Remove hard-coded Solidity versions from Remix links.
 
 LINK conforms to the ERC-677 token standard which is an extension of ERC-20. This standard is what enables data to be encoded in token transfers. This is integral to the Request and Receive cycle. [Click here](https://github.com/ethereum/EIPs/issues/677) to learn more about ERC-677.
 
@@ -75,11 +85,21 @@ The contract will have the following functions:
 - `fulfillRandomness`: The function that is used by the Oracle to send the result back to
 - `house`: To see the assigned house of an address
 
+<<<<<<< HEAD
 **Note**:To jump straight to the entire implementation, you can [open this contract](https://remix.ethereum.org/#url=https://docs.chain.link/samples/VRF/VRFD20.sol) in remix</a>.
+=======
+> 📘 Open Full Contract
+>
+> To jump straight to the entire implementation, you can [open this contract](https://remix.ethereum.org/#url=https://docs.chain.link/samples/VRF/VRFD20.sol) in remix</a>.
+>>>>>>> Remove hard-coded Solidity versions from Remix links.
 
 ## Importing `VRFConsumerBase`
 
+<<<<<<< HEAD
 Chainlink maintains a [library of contracts](https://github.com/smartcontractkit/chainlink/tree/master/contracts) that make consuming data from oracles easier. For Chainlink VRF, you will use a contract called [`VRFConsumerBase`](https://github.com/smartcontractkit/chainlink/blob/master/contracts/src/v0.8/VRFConsumerBase.sol) which needs to be imported and extended from the contract you create.
+=======
+Chainlink maintains a <a href="https://github.com/smartcontractkit/chainlink/tree/master/contracts" target="_blank">library of contracts</a> that make consuming data from oracles easier. For Chainlink VRF, we use a contract called <a href="https://github.com/smartcontractkit/chainlink/blob/master/contracts/src/v0.8/VRFConsumerBase.sol" target="_blank">`VRFConsumerBase`</a>, which needs to be imported and extended from.
+>>>>>>> Remove hard-coded Solidity versions from Remix links.
 
 ```solidity
 pragma solidity 0.6.7;
@@ -154,7 +174,13 @@ You must add a `ROLL_IN_PROGRESS` variable to signify that the die has been roll
 ```solidity
 pragma solidity 0.8.7;
 
+<<<<<<< HEAD
 import "@chainlink/contracts/src/v0.8/VRFConsumerBase.sol";
+=======
+// ...
+// { variables we've already written }
+// ...
+>>>>>>> Remove hard-coded Solidity versions from Remix links.
 
 contract VRFD20 is VRFConsumerBase, ConfirmedOwner(msg.sender) {
     // variables
@@ -163,8 +189,14 @@ contract VRFD20 is VRFConsumerBase, ConfirmedOwner(msg.sender) {
     // { variables that are already written }
     // ...
 
+<<<<<<< HEAD
     // DiceRolled event
     event DiceRolled(bytes32 indexed requestId, address indexed roller);
+=======
+/// ...
+// { constructor }
+// ...
+>>>>>>> Remove hard-coded Solidity versions from Remix links.
 
     // ...
     // { constructor }
@@ -318,9 +350,17 @@ Click the caret arrow on the right hand side of *Deploy* to expand the parameter
 - `0x6c3699283bda56ad74f6b855546325b68d482e983852a7a82979cc4807b641f4`
 - `100000000000000000`
 
+<<<<<<< HEAD
 These are the coordinator address, LINK address, key hash, and fee. For a full reference of the addresses, key hashes and fees for each network, see [VRF Contracts](../vrf-contracts/). Click deploy and use your Metamask account to confirm the transaction.
 
 **Note**: You should [have some Kovan ETH](/docs/beginners-tutorial/#obtaining-testnet-eth) in your Metamask account to pay for the GAS.
+=======
+These are the coordinator address, LINK address, key hash, and fee. Click deploy and use your Metamask account to confirm the transaction.
+
+> 📘 Address, Key Hashes and more
+>
+> For a full reference of the addresses, key hashes and fees for each network, see [VRF Contracts](../vrf-contracts/).
+>>>>>>> Remove hard-coded Solidity versions from Remix links.
 
 At this point, your contract should be successfully deployed. However, it can't request anything yet since it doesn't own LINK. If you click `rollDice` with no LINK, the transaction will revert.
 
