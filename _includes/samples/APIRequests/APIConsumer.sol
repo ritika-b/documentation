@@ -5,7 +5,7 @@ import "@chainlink/contracts/src/v0.8/ChainlinkClient.sol";
 
 /**
  * Request testnet LINK and ETH here: https://faucets.chain.link/
- * Find information on LINK Token Contracts here: https://docs.chain.link/docs/link-token-contracts/
+ * Find information on LINK Token Contracts and get the latest ETH and LINK faucets here: https://docs.chain.link/docs/link-token-contracts/
  */
 
 /**
