@@ -22,10 +22,14 @@ Be sure to check the docs above for remix examples!
 ## Support Communications
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 Always refer back to the [getting help](/docs/getting-help) page for the latest information about how to get support.
 =======
 Always refer back to the [getting help](/docs/getting-help) page for the latest information about how to get support. 
 >>>>>>> updated for new getting help process (#396)
+=======
+Always refer back to the [getting help](/docs/getting-help) page for the latest information about how to get support.
+>>>>>>> Update v2 Job Specs docs for 1.0.0 nodes.
 
 - [Getting Help](/docs/getting-help))
 - [Stack Overflow](https://stackoverflow.com/questions/tagged/chainlink)
@@ -64,10 +68,15 @@ New? Start with [Beginners - The Basics](../beginners-tutorial/), and follow eve
 ## Blockchain Specific
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 - [Matic Data Feeds](../matic-addresses/)
 - [Binance Smart Chain Data Feeds](../binance-smart-chain-addresses/)
 =======
 - [Matic Data Feeds](../matic-addresses/) 
 - [Binance Smart Chain Data Feeds](../binance-smart-chain-addresses/) 
 >>>>>>> updated for new getting help process (#396)
+=======
+- [Matic Data Feeds](../matic-addresses/)
+- [Binance Smart Chain Data Feeds](../binance-smart-chain-addresses/)
+>>>>>>> Update v2 Job Specs docs for 1.0.0 nodes.
 - [Conflux](https://github.com/Conflux-Network-Global/demo-cfx-chainlink)
