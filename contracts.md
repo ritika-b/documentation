@@ -154,5 +154,26 @@ permalink: /
         </div>
       </div>
     </div>
+    <div class="cl-section">
+      <div style="display: flex;">
+          <div class="cl-productcard">    
+              <h3 style="font-weight: bold; margin: 8px 0px;">
+                We're here to help
+              </h3>
+              <a href="https://discord.com/invite/aSK4zew">
+                Talk to an expert
+              </a>      
+          </div>
+          <div class="cl-productcard">           
+            <h3 style="font-weight: bold; margin: 8px 0px;">
+              YouTube
+            </h3>
+            <a href="https://www.youtube.com/c/ChainlinkOfficial/playlists">
+              Watch developer tutorials
+            </a>            
+          </div>
+        <a>
+      </div>
+    </div>
   </div>
 </div>
