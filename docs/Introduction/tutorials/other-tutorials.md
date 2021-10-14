@@ -6,7 +6,7 @@ title: "Other Tutorials"
 permalink: "docs/other-tutorials/"
 ---
 
-## Data Feeds Applications
+## Data Feeds Applications <a name="data-feeds-tutorials"></a>
 | Name                                                                                                                                               | Type     | Difficulty |
 |:-------------------------------------------------------------------------------------------------------------------------------------------------- |:-------- |:---------- |
 | [How to Calculate Price Volatility for DeFi Variance Swaps](https://blog.chain.link/how-to-calculate-price-volatility-for-defi-variance-swaps/)    | DeFi     | Advanced   |
