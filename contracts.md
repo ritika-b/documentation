@@ -1,7 +1,7 @@
 ---
 layout: nodes.liquid
 section: smartContract
-title: "Chainlink Smart Contract Docs"
+title: "Chainlink Smart Contract Documentation"
 date: Last Modified
 permalink: /
 ---
@@ -10,10 +10,14 @@ permalink: /
   <div class="markdown-body">
     <div class="cl-section-header">
       <p>
+<<<<<<< HEAD
         Chainlink turns your smart contracts into hybrid smart contracts, giving them access to real-world data and services while maintaining the security and reliability guarantees inherent to blockchain technology.
       </p>
       <p>
         Learn more about Chainlink's products and services with our step‑by‑step tutorials and documentation:
+=======
+        Chainlink turns your smart contracts into hybrid smart contracts, giving them access to real-world data and services while maintaining the security and reliability guarantees inherent to blockchain technology.<br><br>Learn more about Chainlink's products and services with our step‑by‑step tutorials and documentation:
+>>>>>>> Update "The Basics" tutorial and docs homepage
       </p>
     </div>
     <div class="cl-featuredcard">
@@ -88,6 +92,20 @@ permalink: /
         <div>
           <div>
             <h3>New to Ethereum and Smart Contracts?</h3>
+<<<<<<< HEAD
+=======
+            <p>
+              Build your first smart contract connected to off-chain data feeds. 
+            </p>
+          </div>
+          <a href="/docs/beginners-tutorial" class="cl-button--ghost">
+            Start Building
+          </a>
+        </div>
+        <div>
+          <div>
+            <h3>Chainlink Architecture Overview</h3>
+>>>>>>> Update "The Basics" tutorial and docs homepage
             <p>
               Build your first smart contract connected to off-chain data feeds. 
             </p>
@@ -140,6 +158,7 @@ permalink: /
       </div>
     </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <div class="cl-section cl-section--tools">
       <h3>Explore Chainlink Developer Tools</h3>
       <div style="display: flex;">
@@ -190,6 +209,8 @@ permalink: /
         <a>
       </div>
     </div>
+=======
+>>>>>>> Update "The Basics" tutorial and docs homepage
 =======
 >>>>>>> Update "The Basics" tutorial and docs homepage
   </div>
