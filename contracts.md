@@ -1,7 +1,7 @@
 ---
 layout: nodes.liquid
 section: smartContract
-title: "Chainlink Smart Contract Docs"
+title: "Chainlink Smart Contract Documentation"
 date: Last Modified
 permalink: /
 ---
@@ -10,7 +10,7 @@ permalink: /
   <div class="markdown-body">
     <div class="cl-section-header">
       <p>
-        Chainlink turns your smart contracts into hybrid smart contracts, giving them access to real-world data and services.
+        Chainlink turns your smart contracts into hybrid smart contracts, giving them access to real-world data and services while maintaining the security and reliability guarantees inherent to blockchain technology.<br><br>Learn more about Chainlink's products and services with our step‑by‑step tutorials and documentation:
       </p>
     </div>
     <div class="cl-featuredcard">
@@ -37,7 +37,7 @@ permalink: /
           class="cl-image-featured"
         />
         <div>
-          <h3>Generate Verifiable Random Numbers</h3>
+          <h3>Generate Verifiable Random Numbers (VRF)</h3>
           <p>
             Use Chainlink VRF to consume randomness in your smart contracts.
           </p>
@@ -81,24 +81,21 @@ permalink: /
       </div>
     </div>
     <div class="cl-section">
-      <img
-        src="https://uploads-ssl.webflow.com/5e444500cbc42eeb5198206f/5e789d70c115820a2354f2cc_ChainlinkProject.svg"
-        class="cl-image-featured"
-      />
-      <h3>New to Ethereum and Smart Contracts?</h3>
-      <p>
-        Build your first smart contract connected to off-chain data with our
-        Beginner's Walkthrough
-      </p>
-      <a href="/docs/beginners-tutorial" class="keychainify-checked">
-        Start Building
-      </a>
-    </div>
-    <div class="cl-section">
       <div class="cl-box cl-box__lightblue cl-featuredcard">
         <div>
           <div>
-            <h3>Chainlink Architecture</h3>
+            <h3>New to Ethereum and Smart Contracts?</h3>
+            <p>
+              Build your first smart contract connected to off-chain data feeds. 
+            </p>
+          </div>
+          <a href="/docs/beginners-tutorial" class="cl-button--ghost">
+            Start Building
+          </a>
+        </div>
+        <div>
+          <div>
+            <h3>Chainlink Architecture Overview</h3>
             <p>
               Discover how the Chainlink ecosystem bridges the gap between
               off-chain data and smart contracts.
@@ -125,6 +122,7 @@ permalink: /
         </div>
       </div>
     </div>
+<<<<<<< HEAD
     <div class="cl-section cl-section--tools">
       <h3>Explore Chainlink Developer Tools</h3>
       <div style="display: flex;">
@@ -175,5 +173,7 @@ permalink: /
         <a>
       </div>
     </div>
+=======
+>>>>>>> Update "The Basics" tutorial and docs homepage
   </div>
 </div>
