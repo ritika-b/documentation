@@ -10,7 +10,7 @@ permalink: /
   <div class="markdown-body">
     <div class="cl-section-header">
       <p>
-        Chainlink turns your smart contracts into hybrid smart contracts, giving them access to real-world data and services while maintaining the security and reliability guarantees inherent to blockchain technology.<br><br>Learn more about Chainlink's products and services with our step‑by‑step tutorials and documentation:
+        Chainlink turns your smart contracts into hybrid smart contracts, giving them access to real-world data and services while maintaining the security and reliability guarantees inherent to blockchain technology.<p>Learn more about Chainlink's products and services with our step‑by‑step tutorials and documentation:
       </p>
     </div>
     <div class="cl-featuredcard">

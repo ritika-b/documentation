@@ -60,7 +60,7 @@ Smart contracts can connect to real-world market prices of assets to produce pow
 
 # 2. What language is a smart contract written in? <a name="q2"></a>
 
-The most popular language for writing smart contracts on Ethereum is <a href="https://docs.soliditylang.org/en/v0.8.7/" target="_blank">Solidity</a>. It was created by the Ethereum Foundation specifically for smart contract development and is constantly being updated.
+The most popular language for writing smart contracts on Ethereum is [Solidity](https://docs.soliditylang.org/en/v0.8.7/?target=_blank). It was created by the Ethereum Foundation specifically for smart contract development and is constantly being updated.
 
 If you've ever written Javascript, Java, or other object-oriented scripting languages, Solidity should be easy to understand. Similar to object-oriented langauges, Solidity is considered to be a *contract*-oriented language.
 
@@ -88,7 +88,7 @@ contract HelloWorld {
 
 The first thing that every solidity file must have is the Solidity version definition. The version HelloWorld.sol is using is 0.8.7, defined by `pragma solidity 0.8.7;`
 
-You can see the latest versions of the Solidity compiler <a href="https://github.com/ethereum/solc-bin/blob/gh-pages/bin/list.txt" target="_blank">here</a>. You may also notice Solidity files containing definitions with multiple versions of Solidity:
+You can see the latest versions of the Solidity compiler [here](https://github.com/ethereum/solc-bin/blob/gh-pages/bin/list.txt/?target=_blank). You may also notice Solidity files containing definitions with multiple versions of Solidity:
 
 ```solidity
 pragma solidity >=0.7.0 <0.9.0;
@@ -109,7 +109,7 @@ contract HelloWorld {
 
 ## 3c. State variables `string public ...` <a name="q3c"></a>
 
-Again, like Javascript, contracts can have state variables and local variables. *State variables* are variables whose values are permanently stored in a contract storage; the values of *local variables*, however, are only present till the function is executing. There are also diffferent *types* of variables you can use within Solidity, such as `string`, `uint256`, etc. Check out the <a href="https://docs.soliditylang.org/en/v0.8.7/" target="_blank">Solidity documentation</a> to learn more about the different kinds of variables and types.
+Again, like Javascript, contracts can have state variables and local variables. *State variables* are variables whose values are permanently stored in a contract storage; the values of *local variables*, however, are only present till the function is executing. There are also diffferent *types* of variables you can use within Solidity, such as `string`, `uint256`, etc. Check out the [Solidity documentation](https://docs.soliditylang.org/en/v0.8.7/?target=_blank) to learn more about the different kinds of variables and types.
 
 _Modifiers_ are used to change the level of access to these variables. Here are some examples of state variables with different modifiers:
 
@@ -158,7 +158,7 @@ contract HelloWorld {
 
 Deploying a smart contract is the process of pushing the code to the blockchain, at which point it resides with an on-chain address. Once it's deployed, the code cannot be changed and is said to be *immutable*.
 
-As long as the address is known, its functions can be called through an interface, on <a href="https://etherscan.io/" target="_blank">Etherscan</a>, or through a library like <a href="https://web3js.readthedocs.io/en/v1.3.0/" target="_blank">web3js</a>, <a href="https://web3py.readthedocs.io/" target="_blank">web3py</a>, <a href="https://docs.ethers.io/v5/" target="_blank">ethers</a>, and more. Contracts can also be written to interact with other contracts on the blockchain.
+As long as the address is known, its functions can be called through an interface, on [Etherscan](https://etherscan.io/?target=_blank), or through a library like [web3js](https://web3js.readthedocs.io/en/v1.3.0/?target=_blank), [web3py](https://web3py.readthedocs.io/?target=_blank), [ethers](https://docs.ethers.io/v5/?target=_blank), and more. Contracts can also be written to interact with other contracts on the blockchain.
 
 # 5. What are oracles? Why are they important? <a name="q5"></a>
 
@@ -168,9 +168,9 @@ Oracles play an extremely important role in facilitating the full potential of s
 
 # 6. How do smart contracts use oracles? <a name="q6"></a>
 
-Oracles are most popularly used with [Data Feeds](../using-chainlink-reference-contracts/) . DeFi platforms like <a href="https://aave.com/" target="_blank">AAVE</a> and <a href="https://www.synthetix.io/" target="_blank">Synthetix</a> use Chainlink data feed oracles to obtain accurate real-time asset prices in their smart contracts.
+Oracles are most popularly used with [Data Feeds](../using-chainlink-reference-contracts/) . DeFi platforms like [AAVE](https://aave.com/?target=_blank) and [Synthetix](https://www.synthetix.io/?target=_blank) use Chainlink data feed oracles to obtain accurate real-time asset prices in their smart contracts.
 
-Chainlink data feeds are sources of data [aggregated from many independent Chainlink node operators](../architecture-decentralized-model/). Each data feed has an on-chain address and functions that enable contracts to read from that address. For example, the <a href="https://feeds.chain.link/eth-usd" target="_blank">ETH / USD feed</a>.
+Chainlink data feeds are sources of data [aggregated from many independent Chainlink node operators](../architecture-decentralized-model/). Each data feed has an on-chain address and functions that enable contracts to read from that address. For example, the [ETH / USD feed](https://feeds.chain.link/eth-usd/?target=_blank).
 
 ![Chainlink Feeds List](/images/contract-devs/price-aggr.png)
 
@@ -208,7 +208,7 @@ The following code is from the [Get the Latest Price](../get-the-latest-price/) 
 {% include samples/PriceFeeds/PriceConsumerV3.sol %}
 ```
 
-Notice how the code imports an interface called `AggregatorV3Interface`. In this case, `AggregatorV3Interface` defines that all V3 Aggregators will have the function `latestRoundData`. We can see all of the functions that a V3 Aggregator exposes in the <a href="https://github.com/smartcontractkit/chainlink/blob/master/contracts/src/v0.8/interfaces/AggregatorV3Interface.sol" target="_blank">`AggregatorV3Interface` file on Github.</a>
+Notice how the code imports an interface called `AggregatorV3Interface`. In this case, `AggregatorV3Interface` defines that all V3 Aggregators will have the function `latestRoundData`. We can see all of the functions that a V3 Aggregator exposes in the[`AggregatorV3Interface` file on Github](https://github.com/smartcontractkit/chainlink/blob/master/contracts/src/v0.8/interfaces/AggregatorV3Interface.sol/?target=_blank).
 
 Our contract is initialized with the hard-coded address of the Kovan data feed for ETH / USD prices. Then in `getLatestPrice` it uses `latestRoundData` to obtain the most recent round of price data. We're interested in the price, so the function returns that.
 
@@ -225,7 +225,7 @@ We have the code. What we need next is a compiler.
 
 ## 7a. The Remix IDE <a name="q7a"></a>
 
-<a href="https://remix.ethereum.org/" target="_blank">Remix</a> is an online IDE which enables anyone to write, compile and deploy smart contracts from the browser.
+[Remix](https://remix.ethereum.org/?target=_blank) is an online IDE which enables anyone to write, compile and deploy smart contracts from the browser.
 
 Fortunately for us, Remix also has support for gist. This means that Remix can load code from Github, and in this case, `PriceConsumerV3.sol` Click the button below to open a new tab, then once Remix has loaded, find the `gists` folder in the File Explorer on the left-hand side, and click on the file to open the code in the editor.
 
@@ -248,7 +248,7 @@ Now we need an address to deploy from.
 
 Contracts are deployed by addresses on the network, so to deploy our own we need an address. Not only that, but we need one which we can easily use with Remix. Fortunately, Metamask is just what is needed. Metamask allows anyone to create an address, store funds and interact with Ethereum compatible blockchains from a browser extension.
 
-Head to the <a href="https://metamask.io/" target="_blank">Metamask website</a> to download, install and create an account.
+Head to the [Metamask website](https://metamask.io/?target=_blank) to download, install and create an account.
 
 Once that's done, navigate to the Kovan testnet inside Metamask extension, as seen in the image below.
 
