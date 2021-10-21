@@ -189,7 +189,7 @@ contract HelloWorld {
 
 ## 3c. State variables `string public ...` <a name="q3c"></a>
 
-Again, like Javascript, contracts can have state variables and local variables. *State variables* are variables whose values are permanently stored in a contract storage; the values of *local variables*, however, are only present till the function is executing. There are also diffferent *types* of variables you can use within Solidity, such as `string`, `uint256`, etc. Check out the [Solidity documentation](https://docs.soliditylang.org/en/v0.8.7/?target=_blank) to learn more about the different kinds of variables and types.
+Again, like Javascript, contracts can have state variables and local variables. *State variables* are variables with values that are permanently stored in contract storage. The values of *local variables*, however, are present only until the function is executing. There are also different *types* of variables you can use within Solidity, such as `string`, `uint256`, etc. Check out the [Solidity documentation](https://docs.soliditylang.org/en/v0.8.7/) to learn more about the different kinds of variables and types.
 
 _Modifiers_ are used to change the level of access to these variables. Here are some examples of state variables with different modifiers:
 
