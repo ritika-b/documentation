@@ -58,13 +58,7 @@ If a job needs to make a GET request to an API, find a specific unsigned integer
 
 Let's walk through a real example, where you will retrieve 24 volume of the [ETH/USD pair](https://min-api.cryptocompare.com/data/pricemultifull?fsyms=ETH&tsyms=USD) from the cryptocompare API.
 
-<<<<<<< HEAD
 1. [HttpGet](../core-adapters/#httpget) - Calls the API and returns the body of an HTTP GET result for [ETH/USD pair](https://min-api.cryptocompare.com/data/pricemultifull?fsyms=ETH&tsyms=USD).
-=======
-### Core Adapters Example
-
-1. [HttpGet](../core-adapters/#httpget) - Calls the API and returns the body of an HTTP GET result for [ETH/USD pair](https://min-api.cryptocompare.com/data/pricemultifull?fsyms=ETH&tsyms=USD).  Example:
->>>>>>> Remove hard-coded Solidity versions from Remix links.
 ```json
 {"RAW":
   {"ETH":

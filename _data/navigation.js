@@ -228,10 +228,14 @@ module.exports = {
             children: [
               {
 <<<<<<< HEAD
+<<<<<<< HEAD
                 title: 'The Basics: Data Feeds',
 =======
                 title: 'The Basics: Using Data Feeds',
 >>>>>>> Update "The Basics" tutorial and docs homepage
+=======
+                title: 'The Basics: Data Feeds',
+>>>>>>> Apply suggestions from code review
                 url: '/docs/beginners-tutorial/',
               },
               {
