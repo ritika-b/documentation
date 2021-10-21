@@ -1,7 +1,7 @@
 ---
 layout: nodes.liquid
 section: smartContract
-title: "Chainlink Smart Contract Documentation"
+title: "Chainlink Smart Contract Docs"
 date: Last Modified
 permalink: /
 ---
@@ -124,6 +124,7 @@ permalink: /
             Start Building
           </a>
         </div>
+<<<<<<< HEAD
         <div>
           <div>
             <h3>Chainlink Architecture Overview</h3>
@@ -183,6 +184,36 @@ permalink: /
             />
             <h3>Contracts ↗</h3>
           </a>
+=======
+      </div>
+      <div class="cl-section cl-section--tools">
+        <h3>Explore Chainlink Developer Tools</h3>
+        <div style="display: flex;">
+          <div class="cl-productcard">
+            <a
+              href="https://www.npmjs.com/package/@chainlink/contracts"
+              target="_blank"
+              class="fill-div">
+              <img
+                src="https://uploads-ssl.webflow.com/5e444500cbc42eeb5198206f/5e711675d22595473f1c0c20_Contract.svg"
+                class="cl-image-featured"
+              />
+              <h3>Contracts ↗</h3>
+            </a>
+          </div>
+          <div class="cl-productcard">
+            <a
+              href="https://www.npmjs.com/package/@chainlink/test-helpers"
+              target="_blank"
+              class="fill-div">
+              <img
+                src="https://uploads-ssl.webflow.com/5e444500cbc42eeb5198206f/5e7116765b27d4521f92bac6_Tester.svg"
+                class="cl-image-featured"
+              />
+              <h3>Test Helpers ↗</h3>
+            </a>
+          </div>
+>>>>>>> updating hyperlinks and titles/subtitles and TOC
         </div>
         <div class="cl-productcard">
           <a

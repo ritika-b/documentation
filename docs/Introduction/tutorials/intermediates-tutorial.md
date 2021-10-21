@@ -363,9 +363,13 @@ These are the coordinator address, LINK address, key hash, and fee. Click deploy
 >>>>>>> Remove hard-coded Solidity versions from Remix links.
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 At this point, your contract should be successfully deployed. However, it can't request anything yet since it doesn't own LINK. If you click `rollDice` with no LINK, the transaction will revert.
 =======
 (Note: you should <a href="/docs/beginners-tutorial/#q7c" target="_blank">have some Kovan ETH in your Metamask account</a> to pay for the GAS).
+=======
+(Note: you should <a href="/docs/beginners-tutorial/#obtaining-testnet-eth" target="_blank">have some Kovan ETH in your Metamask account</a> to pay for the GAS).
+>>>>>>> updating hyperlinks and titles/subtitles and TOC
 
 Once deployed, the contract is almost ready to go! However, it can't request anything yet, since it doesn't own LINK. If we hit `rollDice` with no LINK, the transaction will revert.
 >>>>>>> update hyperlink for intermediate-tutorial
