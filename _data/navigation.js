@@ -227,7 +227,7 @@ module.exports = {
             url: '/docs/tutorials/',
             children: [
               {
-                title: 'The Basics: Using Data Feeds',
+                title: 'The Basics: Data Feeds',
                 url: '/docs/beginners-tutorial/',
               },
               {
