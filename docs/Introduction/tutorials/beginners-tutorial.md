@@ -24,7 +24,7 @@ metadata:
 
 # Overview
 
-By the end of this tutorial, you should be able to write and deploy your very own Chainlink smart contract to an Ethereum testnet!
+In this tutorial, you will write and deploy a Chainlink smart contract to an Ethereum testnet.
 
 **Table of Contents**
 
