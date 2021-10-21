@@ -17,10 +17,14 @@ Chainlink Keepers:
 ## Will Chainlink Keepers work for my use case?
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 We are here to help! For help with your use case, please [reach out directly](https://chainlinkcommunity.typeform.com/to/OYQO67EF?page=docs-keepers) and we would be happy to connect you with one of our Solutions Architects. You can also ask questions about Chainlink Keepers on [Stack Overflow](https://stackoverflow.com/questions/ask?tags=chainlink) or in the [#keepers channel](https://discord.com/channels/592041321326182401/821350860302581771) in our [Discord server](https://discord.gg/qj9qarT).
 =======
 We are here to help! For help with your use case, please [reach out directly](mailto:keeper@chain.link) and we would be happy to connect you with one of our Solutions Architects. You can also ask questions about Chainlink Keepers on [Stack Overflow](https://stackoverflow.com/questions/ask?tags=chainlink) or in the [#keepers channel](https://discord.com/channels/592041321326182401/821350860302581771) in our [Discord server](https://discord.gg/qj9qarT).
 >>>>>>> updated for new getting help process (#396)
+=======
+We are here to help! For help with your use case, please [reach out directly](https://chainlinkcommunity.typeform.com/to/OYQO67EF?page=docs-keepers) and we would be happy to connect you with one of our Solutions Architects. You can also ask questions about Chainlink Keepers on [Stack Overflow](https://stackoverflow.com/questions/ask?tags=chainlink) or in the [#keepers channel](https://discord.com/channels/592041321326182401/821350860302581771) in our [Discord server](https://discord.gg/qj9qarT).
+>>>>>>> Update faqs.md
 
 ## Is the Chainlink Keeper Network available on platforms other than Ethereum?
 
