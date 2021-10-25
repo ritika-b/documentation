@@ -11,7 +11,11 @@ metadata:
     0: "insert image here"
 ---
 <<<<<<< HEAD
+<<<<<<< HEAD
 *This doc is meant to be used as a template for creating a tutorial doc. Users should emulate the structure of this document when creating their own templates. The content of this doc comes from beginners-tutorial.md.*
+=======
+*This doc is meant to be used as a template for creating a tutorial doc. Users should emulate the structure of this document when creating their own templates. The content of this doc comes from beginners-tutoral.md.*
+>>>>>>> update template guide
 
 <<<<<<< HEAD
 *Prerequisites should have its own block at the beginning of the tutorial. Make sure to tell the user what knowledge they should already have and where to go if they need previous reading. Make sure to direct them to other docs pages.*
