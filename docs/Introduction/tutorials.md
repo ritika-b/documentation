@@ -11,7 +11,7 @@ hidden: false
 
 We've compiled a series of tutorials designed to teach smart contracts basics and how to use them to consume data from the Chainlink oracle ecosystem.
 
-# The Basics Tutorial
+# The Basics: Using Data Feeds Tutorial
 
 If you're new to smart contract development, this is a great place to start. We walk you through developing your first smart contract that interacts with Chainlink.
 
