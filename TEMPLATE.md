@@ -12,6 +12,7 @@ metadata:
 ---
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 *This doc is meant to be used as a template for creating a tutorial doc. Users should emulate the structure of this document when creating their own templates. The content of this doc comes from beginners-tutorial.md.*
 =======
 *This doc is meant to be used as a template for creating a tutorial doc. Users should emulate the structure of this document when creating their own templates. The content of this doc comes from beginners-tutoral.md.*
@@ -24,6 +25,11 @@ metadata:
 >>>>>>> update tutorials format
 =======
 *Prerequisites should have its own code block at the beginning of the tutorial. Make sure to tell the user what knowledge they should already have and where to go if they need previous reading. Make sure to direct them to other docs pages.*
+>>>>>>> update template
+=======
+*This doc is meant to be used as a template for creating a tutorial doc. Users should emulate the structure of this document when creating their own templates. The content of this doc comes from beginners-tutorial.md.*
+
+*Prerequisites should have its own block at the beginning of the tutorial. Make sure to tell the user what knowledge they should already have and where to go if they need previous reading. Make sure to direct them to other docs pages.*
 >>>>>>> update template
 > 👍 Prerequisites
 >
@@ -123,9 +129,14 @@ A valuable feature of smart contracts is that they can store and manage on-chain
 >>>>>>> update template
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 Smart contracts can connect to real-world market prices of assets to produce powerful applications. Chainlink's **[Data Feeds](../using-chainlink-reference-contracts/)** feature allows users to quickly and securely connect smart contracts to such assets in a single call. You can read more about the applications of data feeds [here](/docs/other-tutorials/#data-feeds-tutorials).
 >>>>>>> update tutorials format
 =======
+=======
+*Notice how users are given external links to read more about concepts such as ETH or ERC20 tokens. They do not have to undertake a separate search.*
+
+>>>>>>> update template
 Smart contracts can connect to real-world market prices of assets to produce powerful applications. Chainlink's **[Data Feeds](../using-chainlink-reference-contracts/)** feature allows users to quickly and securely connect smart contracts to such assets in a single call. 
 >>>>>>> update template
 
