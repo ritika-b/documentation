@@ -89,6 +89,7 @@ Randomness, on the other hand, cannot be reference data. If the result of random
 
 # 3. What is the payment process for generating a random number?
 
+<<<<<<< HEAD
 In return for providing the service of generating a random number, oracles need to be paid in [LINK](../link-token-contracts/). This is paid by the contract which requests the randomness, and payment occurs during the request.
 >>>>>>> update tutorials format
 
@@ -105,6 +106,11 @@ LINK conforms to the ERC-677 token standard which is an extension of ERC-20. Thi
 =======
 > LINK conforms to the ERC-677 token standard which is an extension of ERC-20. This standard is what enables data to be encoded in token transfers. This is integral to the Request and Receive cycle. [Click here](https://github.com/ethereum/EIPs/issues/677) to learn more about ERC-677.
 >>>>>>> update tutorials format
+=======
+In return for providing the service of generating a random number, oracles need to be paid in [**LINK**](../link-token-contracts/). This is paid by the contract which requests the randomness, and payment occurs during the request. 
+
+LINK conforms to the ERC-677 token standard which is an extension of ERC-20. This standard is what enables data to be encoded in token transfers. This is integral to the Request and Receive cycle. [Click here](https://github.com/ethereum/EIPs/issues/677) to learn more about ERC-677.
+>>>>>>> updates
 
 Smart contracts have all the capabilities that wallets have in that they are able to own and interact with tokens. The contract which requests randomness from Chainlink VRF must have a LINK balance equivalent to, or greater than, the cost of making the request in order to pay and fulfill the service.
 
@@ -128,12 +134,16 @@ The contract will have the following functions:
 - `house`: To see the assigned house of an address
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 **Note**:To jump straight to the entire implementation, you can [open this contract](https://remix.ethereum.org/#url=https://docs.chain.link/samples/VRF/VRFD20.sol) in remix</a>.
 =======
 > 📘 Open Full Contract
 >
 > To jump straight to the entire implementation, you can [open this contract](https://remix.ethereum.org/#url=https://docs.chain.link/samples/VRF/VRFD20.sol) in remix</a>.
 >>>>>>> Remove hard-coded Solidity versions from Remix links.
+=======
+**Note**:To jump straight to the entire implementation, you can [open this contract](https://remix.ethereum.org/#url=https://docs.chain.link/samples/VRF/VRFD20.sol) in remix</a>.
+>>>>>>> updates
 
 ## Importing `VRFConsumerBase`
 
@@ -460,6 +470,7 @@ Click the caret arrow on the right hand side of *Deploy* to expand the parameter
 - `100000000000000000`
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 These are the coordinator address, LINK address, key hash, and fee. For a full reference of the addresses, key hashes and fees for each network, see [VRF Contracts](../vrf-contracts/). Click deploy and use your Metamask account to confirm the transaction.
 
 **Note**: You should [have some Kovan ETH](/docs/beginners-tutorial/#obtaining-testnet-eth) in your Metamask account to pay for the GAS.
@@ -488,6 +499,9 @@ Once deployed, the contract is almost ready to go! However, it can't request any
 
 Since the contract is on testnet, as with Kovan ETH, you don't need to purchase *real* LINK. Testnet LINK can be requested and obtained from a [faucet](../link-token-contracts/).
 =======
+=======
+These are the coordinator address, LINK address, key hash, and fee. For a full reference of the addresses, key hashes and fees for each network, see [VRF Contracts](../vrf-contracts/). Click deploy and use your Metamask account to confirm the transaction.
+>>>>>>> updates
 
 **Note**: You should [have some Kovan ETH](/docs/beginners-tutorial/#obtaining-testnet-eth) in your Metamask account to pay for the GAS.
 

@@ -55,6 +55,12 @@ metadata:
   https://www.youtube.com/watch?v=rFXSEEQG9YE
 </p>
 
+*If a portion of the YouTube video is deprecated or out-of-date, add a note alerting the user.*
+
+> 🚧 Note
+>
+> The video uses a seed phrase to request randomness. This feature has been deprecated. Please refer to the code in this tutorial for the most up to date procedures.
+
 
 # Overview <!-- omit in toc -->
 
