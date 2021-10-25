@@ -515,6 +515,9 @@ You will have to wait a few minutes for your transaction to confirm and the resp
 # 8. Further Reading
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> update further reading
 To read more about generating random numbers in Solidity, read our blog posts:
 
 - [35+ Blockchain RNG Use Cases Enabled by Chainlink VRF](https://blog.chain.link/blockchain-rng-use-cases-enabled-by-chainlink-vrf/)
@@ -522,6 +525,9 @@ To read more about generating random numbers in Solidity, read our blog posts:
 - [Chainlink VRF Now Live on Ethereum Mainnet](https://blog.chain.link/chainlink-vrf-now-live-on-ethereum-mainnet/)
 
 To explore more applications of Chainlink VRF, check out our [other tutorials](/docs/other-tutorials/#vrf-applications).
+<<<<<<< HEAD
 =======
 To read more about generating random numbers in Solidity, read our [blog post](https://blog.chain.link/random-number-generation-solidity/). To explore more applications of Chainlink VRF, check out our [other tutorials](/docs/other-tutorials/#vrf-applications).
 >>>>>>> update tutorials format
+=======
+>>>>>>> update further reading
