@@ -6,10 +6,14 @@ title: "The Basics: Using Data Feeds"
 permalink: "docs/beginners-tutorial/"
 excerpt: "Smart Contracts and Chainlink"
 <<<<<<< HEAD
+<<<<<<< HEAD
 whatsnext: {"Get the Latest Price":"/docs/get-the-latest-price/", "Deploy your First Contract":"/docs/deploy-your-first-contract/", "Random Numbers Tutorial":"/docs/intermediates-tutorial/"}
 =======
 whatsnext: {"Get the Latest Price":"/docs/get-the-latest-price/", "Deploy your first contract":"/docs/deploy-your-first-contract/", "Random Numbers Tutorial":"/docs/intermediates-tutorial/"}
 >>>>>>> Remove hard-coded Solidity versions from Remix links.
+=======
+whatsnext: {"Get the Latest Price":"/docs/get-the-latest-price/", "Deploy your First Contract":"/docs/deploy-your-first-contract/", "Random Numbers Tutorial":"/docs/intermediates-tutorial/"}
+>>>>>>> updating styling and further reading
 metadata:
   title: "The Basics Tutorial"
   description: "Learn what smart contracts are, how to write them, and how to use Chainlink data feeds to deploy your very own Chainlink smart contract."
@@ -95,6 +99,7 @@ In this tutorial, you will write and deploy a Chainlink smart contract to an Eth
 + [5. What are oracles? Why are they important?](#5-what-are-oracles-why-are-they-important)
 + [6. How do smart contracts use oracles?](#6-how-do-smart-contracts-use-oracles)
 + [7. How do I deploy to testnet?](#7-how-do-i-deploy-to-testnet)
++ [8. Further Reading](#8-further-reading)
 
 # 1. What are smart contracts? What are data feeds?
 >>>>>>> updating hyperlinks and titles/subtitles and TOC
@@ -102,10 +107,13 @@ In this tutorial, you will write and deploy a Chainlink smart contract to an Eth
 When deployed to a blockchain, a **smart contract** is a set of instructions that can be executed without intervention from third parties. The code of a smart contract determines how it responds to input, just like the code of any other computer program.
 
 A valuable feature of smart contracts is that they can store and manage on-chain assets (like [ETH or ERC20 tokens](https://ethereum.org/en/developers/docs/standards/tokens/erc-20/)), just like you can with an Ethereum wallet. Because they have an on-chain address like a wallet, they can do everything any other address can. This opens the door for programming automated actions when receiving and transferring assets.
+<<<<<<< HEAD
 
 Smart contracts can connect to real-world market prices of assets to produce powerful applications. Chainlink's **[Data Feeds](../using-chainlink-reference-contracts/)** feature allows users to quickly and securely connect smart contracts to such assets in a single call.
+=======
+>>>>>>> updating styling and further reading
 
-Smart contracts can connect to real-world market prices of assets to produce powerful applications. Chainlink's **[Data Feeds](../using-chainlink-reference-contracts/)** feature allows users to quickly and securely connect smart contracts to such assets in a single call. You can read more about the applications of data feeds [here](/docs/other-tutorials/#data-feeds-tutorials).
+Smart contracts can connect to real-world market prices of assets to produce powerful applications. Chainlink's **[Data Feeds](../using-chainlink-reference-contracts/)** feature allows users to quickly and securely connect smart contracts to such assets in a single call.
 
 # 2. What language is a smart contract written in?
 
@@ -147,6 +155,7 @@ contract HelloWorld {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 ## Define the Version of Solidity
 =======
 ## 3a. Define the version `pragma solidity ...` <a name="q3a"></a>
@@ -159,6 +168,9 @@ The first thing that every solidity file must have is the Solidity version defin
 >>>>>>> Remove hard-coded Solidity versions from Remix links.
 =======
 ## Define the Version
+=======
+## Define the Version of Solidity
+>>>>>>> updating styling and further reading
 
 The first thing that every Solidity file must have is the Solidity version definition. The version HelloWorld.sol is using is 0.8.7, defined by `pragma solidity 0.8.7;`
 >>>>>>> updating hyperlinks and titles/subtitles and TOC
@@ -177,6 +189,7 @@ You can see the latest versions of the Solidity compiler <a href="https://github
 You can see the latest versions of the Solidity compiler [here](https://github.com/ethereum/solc-bin/blob/gh-pages/bin/list.txt/?target=_blank). You may also notice Solidity files containing definitions with multiple versions of Solidity:
 >>>>>>> Update hyperlinks to md & changed <p> tag homepage
 
+<<<<<<< HEAD
 ```solidity
 pragma solidity >=0.7.0 <0.9.0;
 ```
@@ -211,6 +224,11 @@ Again, like Javascript, contracts can have state variables and local variables. 
 >>>>>>> updating hyperlinks and titles/subtitles and TOC
 
 _Modifiers_ are used to change the level of access to these variables. Here are some examples of state variables with different modifiers:
+=======
+## Start your Contract
+
+Next, the `HelloWorld` contract is defined by using the keyword `contract`. Think of this as being similar to declaring `class` in Javascript. The implementation of `HelloWorld` is inside this definition, denoted with curly braces.
+>>>>>>> updating styling and further reading
 
 =======
 ```solidity
@@ -221,9 +239,9 @@ contract HelloWorld {
 }
 ```
 
-## State Variables 
+## Variables 
 
-Again, like Javascript, contracts can have state variables and local variables. *State variables* are variables with values that are permanently stored in contract storage. The values of *local variables*, however, are present only until the function is executing. There are also different *types* of variables you can use within Solidity, such as `string`, `uint256`, etc. Check out the [Solidity documentation](https://docs.soliditylang.org/en/v0.8.7/) to learn more about the different kinds of variables and types.
+Again, like Javascript, contracts can have state variables and local variables. **State variables** are variables with values that are permanently stored in contract storage. The values of **local variables**, however, are present only until the function is executing. There are also different types of variables you can use within Solidity, such as `string`, `uint256`, etc. Check out the [Solidity documentation](https://docs.soliditylang.org/en/v0.8.7/) to learn more about the different kinds of variables and types.
 
 _Modifiers_ are used to change the level of access to these variables. Here are some examples of state variables with different modifiers:
 
@@ -314,7 +332,7 @@ contract HelloWorld {
 
 # 4. What does "deploying" mean? 
 
-Deploying a smart contract is the process of pushing the code to the blockchain, at which point it resides with an on-chain address. Once it's deployed, the code cannot be changed and is said to be *immutable*.
+**Deploying** a smart contract is the process of pushing the code to the blockchain, at which point it resides with an on-chain address. Once it's deployed, the code cannot be changed and is said to be *immutable*.
 
 As long as the address is known, its functions can be called through an interface, on [Etherscan](https://etherscan.io/), or through a library like [web3js](https://web3js.readthedocs.io/en/v1.3.0/), [web3py](https://web3py.readthedocs.io/), [ethers](https://docs.ethers.io/v5/), and more. Contracts can also be written to interact with other contracts on the blockchain.
 
@@ -346,6 +364,7 @@ Oracles are most popularly used with [Data Feeds](../using-chainlink-reference-c
 # 6. How do smart contracts use oracles? 
 
 Oracles are most popularly used with [Data Feeds](../using-chainlink-reference-contracts/). DeFi platforms like [AAVE](https://aave.com/) and [Synthetix](https://www.synthetix.io/) use Chainlink data feed oracles to obtain accurate real-time asset prices in their smart contracts.
+<<<<<<< HEAD
 
 Chainlink data feeds are sources of data [aggregated from many independent Chainlink node operators](../architecture-decentralized-model/). Each data feed has an on-chain address and functions that enable contracts to read from that address. For example, the [ETH / USD feed](https://feeds.chain.link/eth-usd/).
 =======
@@ -365,17 +384,25 @@ Interfaces define functions without their implementation, leaving inheriting con
 ## 6a. Information about interfaces <a name="q6a"></a>
 =======
 Oracles are most popularly used with [Data Feeds](../using-chainlink-reference-contracts/) . DeFi platforms like [AAVE](https://aave.com/) and [Synthetix](https://www.synthetix.io/) use Chainlink data feed oracles to obtain accurate real-time asset prices in their smart contracts.
+=======
+>>>>>>> updating styling and further reading
 
 Chainlink data feeds are sources of data [aggregated from many independent Chainlink node operators](../architecture-decentralized-model/). Each data feed has an on-chain address and functions that enable contracts to read from that address. For example, the [ETH / USD feed](https://feeds.chain.link/eth-usd/).
 
 ![Chainlink Feeds List](/images/contract-devs/price-aggr.png)
 
 ## Information about Interfaces
+<<<<<<< HEAD
 >>>>>>> updating hyperlinks and titles/subtitles and TOC
 Before we go into using data feeds, it's important to know how interfaces work in Solidity. An _interface_ is another concept that will be familiar to programmers of other languages. 
 
 Interfaces define functions without their implementation, leaving inheriting contracts to define the actual implementation themselves. This make it easier to know what functions to call in a contract. Here's an example of an interface:
 >>>>>>> Update "The Basics" tutorial and docs homepage
+=======
+Before we go into using data feeds, it's important to know how interfaces work in Solidity. An **interface** is another concept that will be familiar to programmers of other languages. 
+
+Interfaces define functions without their implementation, leaving inheriting contracts to define the actual implementation themselves. This makes it easier to know what functions to call in a contract. Here's an example of an interface:
+>>>>>>> updating styling and further reading
 
 ```solidity
 pragma solidity 0.8.7;
@@ -591,8 +618,12 @@ Under the logo in the top left-hand corner, there's a vertical menu, made up of 
 
 We have all the pieces needed to deploy our price consumer to Kovan. To start the process we need to compile it first. Head back to the Remix tab.
 
+<<<<<<< HEAD
 Under the logo in the top left-hand corner, there's a vertical menu, made up of icons. Hovering over each button shows a tooltip explaining what each item is. The first is "File explorer", which shows us all the files loaded into Remix. The second is "Solidity compiler". Click this item to open up a side menu where we can compile our contract.
 >>>>>>> Update "The Basics" tutorial and docs homepage
+=======
+Under the logo in the top left-hand corner, there's a vertical menu, made up of icons. Hovering over each button shows a tooltip explaining what each item is. The first is **File explorer**, which shows us all the files loaded into Remix. The second is **Solidity compiler**. Click this item to open up a side menu where we can compile our contract.
+>>>>>>> updating styling and further reading
 
 Remix should automatically detect the correct compiler version depending on the version specified in the contract, and you should see a button that looks like this:
 
@@ -605,6 +636,7 @@ Click it, and you will see some details below it by scrolling down. There might 
 ## Deploying
 
 Looking at the icon menu on the far-left again. Below the compiler icon should be **Deploy & run transactions**. Click on that.
+<<<<<<< HEAD
 
 This screen might seem a little more intimidating, but do not fret. This is where we hook up Metamask to Remix so that it knows which account to deploy from.
 
@@ -622,17 +654,23 @@ Once your smart contract is deployed, an item will appear in the **Deployed Cont
 >>>>>>> updating hyperlinks and titles/subtitles and TOC
 
 Looking at the icon menu on the far-left again. Below the compiler icon should be "Deploy & run transactions". Click on that.
+=======
+>>>>>>> updating styling and further reading
 
 This screen might seem a little more intimidating, but do not fret. This is where we hook up Metamask to Remix so that it knows which account to deploy from.
 
-In the first dropdown, named _ENVIRONMENT_, the selected value should currently be "Javascript VM". Instead, select "Injected Web3". This should trigger a Metamask notification asking for permission to connect. Accept it, and your address should be automatically loaded into the _ACCOUNT_ dropdown below _ENVIRONMENT_.
+Click **ENVIRONMENT**. the selected value should currently be **Javascript VM**. Instead, select **Injected Web3**. This should trigger a Metamask notification asking for permission to connect. Accept it, and your address should be automatically loaded into the **ACCOUNT** menu below **ENVIRONMENT**.
 
-Once that's done, check that the _CONTRACT_ dropdown shows the name of our contract, then click "Deploy". Another Metamask notification will pop up asking for permission, and detailing how much GAS it will cost in testnet ETH. Confirm the transaction and await confirmation! This may take a few seconds depending on the network, so be patient.
+Once that's done, check that the **CONTRACT** menu displays the name of our contract, then click **Deploy**. Another Metamask notification will pop up asking for permission, and detailing how much GAS it will cost in testnet ETH. Confirm the transaction and await confirmation! This may take a few seconds depending on the network, so be patient.
 
 ## Get the Price
 
+<<<<<<< HEAD
 Once your smart contract is deployed, an item will appear in the "Deployed Contracts" section underneath the "Deploy" button. This is the deployed contract with all its address.
 >>>>>>> Update "The Basics" tutorial and docs homepage
+=======
+Once your smart contract is deployed, an item will appear in the **Deployed Contracts** section underneath the **Deploy** button. This is the deployed contract with all its address.
+>>>>>>> updating styling and further reading
 
 ![Remix Deployed Contracts Section](/files/ca77c39-Screenshot_2020-11-27_at_10.56.56.png)
 
