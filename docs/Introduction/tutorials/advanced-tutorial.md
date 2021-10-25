@@ -33,9 +33,15 @@ In this tutorial you will learn how to request data from a public API in a smart
 
 The request and receive cycle describes how a smart contract requests data from an oracle and receives the response in a separate transaction. If you need a refresher, check out the [Basic Request Model](../architecture-request-model/).
 
+<<<<<<< HEAD
 In the [Random Numbers](../intermediates-tutorial/) tutorial, you requested randomness from a VRF oracle, then await the response. The fulfilment function is already given to us from the `VRFConsumerBase` contract, so oracles already know where to send the response to. However, with API calls, the contract itself *defines* which function it wants to receive the response to.
 
 Before creating any code, you should understand how Oracle jobs can get data on-chain.
+=======
+In the [Random Numbers](../intermediates-tutorial/) tutorial, we request randomness from a VRF oracle, then await the response. The fulfilment function is already given to us from the `VRFConsumerBase` contract, so oracles already know where to send the response to. However, with API calls, our contract *defines* which function it wants to receive the response to.
+
+Before we go into the implementation let's understand how Oracle jobs can get data on-chain.
+>>>>>>> update tutorials format
 
 # 2. What are initiators?
 
@@ -43,7 +49,11 @@ Before creating any code, you should understand how Oracle jobs can get data on-
 
 # 3. What are Adapters?
 
+<<<<<<< HEAD
 Each oracle job has a configured set of tasks it needs to carry out when it is run. These tasks are defined by the [**Adapters**](../core-adapters/) they support. Adapters are split into two subcategories:
+=======
+Each oracle job has a configured set of tasks it needs to carry out when it is run. These tasks are defined by the [**Adapters**](../core-adapters/) they support. We split Adapters into two subcategories:
+>>>>>>> update tutorials format
 
 - **Core Adapters** - These are adapters that come built-in to each node. (examples: HttpGet, EthUint256, etc)
 - **External Adapters** - These are custom adapters built by node operators and community members, which perform specific tasks like calling a particular endpoint with a specific set of parameters (like authentication secrets that shouldn't be publicly visible smart contracts).
@@ -56,7 +66,11 @@ If a job needs to make a GET request to an API, find a specific unsigned integer
 - [EthUint256](../core-adapters/#ethuint256) - Convert the data to Ethereum compatible data type (uint256)
 - [EthTx](../core-adapters/#ethtx)  - Submit the transaction to the chain, completing the cycle.
 
+<<<<<<< HEAD
 Let's walk through a real example, where you will retrieve 24 volume of the [ETH/USD pair](https://min-api.cryptocompare.com/data/pricemultifull?fsyms=ETH&tsyms=USD) from the cryptocompare API.
+=======
+Let's walk through a real example, where we retrieve 24 volume of the [ETH/USD pair](https://min-api.cryptocompare.com/data/pricemultifull?fsyms=ETH&tsyms=USD) from the cryptocompare API.
+>>>>>>> update tutorials format
 
 1. [HttpGet](../core-adapters/#httpget) - Calls the API and returns the body of an HTTP GET result for [ETH/USD pair](https://min-api.cryptocompare.com/data/pricemultifull?fsyms=ETH&tsyms=USD).
 ```json
@@ -127,7 +141,11 @@ If all the parameters are defined within the Oracle job, the only thing a smart 
 - LINK fee
 - Fulfillment function
 
+<<<<<<< HEAD
 This will make your smart contract much more succinct and the `requestVolumeData` function from the code example [above](#contract-example) would look more like this:
+=======
+This makes our smart contract much more succinct and the `requestVolumeData` function from the code example [above](#contract-example) would look more like this:
+>>>>>>> update tutorials format
 
 ```solidity
 function requestVolumeData() public returns (bytes32 requestId) {

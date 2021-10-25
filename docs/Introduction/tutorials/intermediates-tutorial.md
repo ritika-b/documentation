@@ -25,6 +25,7 @@ metadata:
 > 🚧 Note
 >
 <<<<<<< HEAD
+<<<<<<< HEAD
 > The video uses a seed phrase to request randomness. This feature has been deprecated. Please refer to the code in this tutorial for the most up to date procedures.
 =======
 > The video uses a seed phrase to request randomness, this has been depreciated. Please use the code here.
@@ -57,16 +58,53 @@ The [previous tutorial](../beginners-tutorial/) explained how to consume Chainli
 Randomness, on the other hand, cannot be reference data. If the result of randomness is stored on-chain, any actor could retrieve the value and predict the outcome. Instead, randomness must be requested from an oracle, which generates a number and a cryptographic proof then returns that result to the contract that requested it. This sequence is what's known as the **[Request and Receive cycle](../architecture-request-model/)**.
 
 # 3. What is the payment process for generating a random number?
+=======
+> The video uses a seed phrase to request randomness. This feature has been deprecated. Please refer to the code in this tutorial for the most up to date procedures.
+
+
+# Overview <!-- omit in toc -->
+
+In this tutorial, you will learn about generating randomness on blockchains. This includes learning how to implement a Request and Receive cycle with Chainlink oracles and how to consume random numbers with Chainlink VRF in smart contracts.
+
+**Table of Contents**
+
++ [1. How is randomness generated on blockchains? What is Chainlink VRF?](#1-how-is-randomness-generated-on-blockchains-what-is-chainlink-vrf)
++ [2. What is the Request and Receive cycle?](#2-what-is-the-request-and-receive-cycle)
++ [3. What is the payment process for generating a random number?](#3-what-is-the-payment-process-for-generating-a-random-number)
++ [4. How can I use Chainlink VRF?](#4-how-can-i-use-chainlink-vrf)
++ [5. How do I deploy to testnet?](#5-how-do-i-deploy-to-testnet)
++ [6. How do I obtain testnet LINK?](#6-how-do-i-obtain-testnet-link)
++ [7. How do I test `rollDice`?](#7-how-do-i-test-rolldice)
++ [8. Further Reading](#8-further-reading)
+
+# 1. How is randomness generated on blockchains? What is Chainlink VRF?
+
+Randomness is very difficult to generate on blockchains. This is because every node on the blockchain must come to the same conclusion and form a consensus. Even though random numbers are versatile and useful in a variety of blockchain applications, they cannot be generated natively in smart contracts. The solution to this issue is [**Chainlink VRF**](../chainlink-vrf/), also known as Chainlink Verifiable Random Function.
+
+# 2. What is the Request and Receive cycle?
+
+The [previous tutorial](../beginners-tutorial/) explained how to consume Chainlink Data Feeds which consist of reference data posted on-chain by oracles. This data is stored in a contract and can be referenced by consumers until the oracle updates the data again.
+
+Randomness, on the other hand, cannot be reference data. If the result of randomness is stored on-chain, any actor could retrieve the value and predict the outcome. Instead, randomness must be requested from an oracle, which generates a number and a cryptographic proof then returns that result to the contract that requested it. This sequence is what's known as the **[Request and Receive cycle](../architecture-request-model/)**.
+
+# 3. What is the payment process for generating a random number?
+
+In return for providing the service of generating a random number, oracles need to be paid in [LINK](../link-token-contracts/). This is paid by the contract which requests the randomness, and payment occurs during the request.
+>>>>>>> update tutorials format
 
 <<<<<<< HEAD
 In return for providing the service of generating a random number, oracles need to be paid in [**LINK**](../link-token-contracts/). This is paid by the contract which requests the randomness, and payment occurs during the request. 
 =======
 > 📘 ERC-677 Token Standard
 >
+<<<<<<< HEAD
 > LINK conforms to the ERC-677 token standard, and extension of ERC-20. This standard is what enables data to be encoded in token transfers. This is integral to the Request and Receive cycle. [Click here](https://github.com/ethereum/EIPs/issues/677) to learn more about ERC-677.
 >>>>>>> Remove hard-coded Solidity versions from Remix links.
 
 LINK conforms to the ERC-677 token standard which is an extension of ERC-20. This standard is what enables data to be encoded in token transfers. This is integral to the Request and Receive cycle. [Click here](https://github.com/ethereum/EIPs/issues/677) to learn more about ERC-677.
+=======
+> LINK conforms to the ERC-677 token standard which is an extension of ERC-20. This standard is what enables data to be encoded in token transfers. This is integral to the Request and Receive cycle. [Click here](https://github.com/ethereum/EIPs/issues/677) to learn more about ERC-677.
+>>>>>>> update tutorials format
 
 Smart contracts have all the capabilities that wallets have in that they are able to own and interact with tokens. The contract which requests randomness from Chainlink VRF must have a LINK balance equivalent to, or greater than, the cost of making the request in order to pay and fulfill the service.
 
@@ -74,7 +112,11 @@ For example, if the current price of Chainlink VRF is 0.1 LINK, the requesting c
 
 # 4. How can I use Chainlink VRF?
 
+<<<<<<< HEAD
 To see a basic implementation of Chainlink VRF, see [Get a Random Number](../get-a-random-number/). In this section, you will create an application which utilizes Chainlink VRF to generate randomness. The contract used in this application will have  a [*Game of Thrones*](https://en.wikipedia.org/wiki/Game_of_Thrones) theme. 
+=======
+To see a basic implementation of Chainlink VRF, see [Get a Random Number](../get-a-random-number/). In this section, we'll be creating an application which utilizes Chainlink VRF to generate randomness. We'll start by creating a contract with a [*Game of Thrones*](https://en.wikipedia.org/wiki/Game_of_Thrones) theme. 
+>>>>>>> update tutorials format
 
 The contract will request randomness from Chainlink VRF. The result of the randomness will transform into a number between 1 and 20, mimicking the rolling of a 20 sided die. Each number represents a *Game of Thrones* house. If the dies land on the value 1, the user is assigned house Targaryan, 2 for Lannister, and so on. A full list of houses can be found [here](https://gameofthrones.fandom.com/wiki/Great_House).
 
@@ -96,10 +138,14 @@ The contract will have the following functions:
 ## Importing `VRFConsumerBase`
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 Chainlink maintains a [library of contracts](https://github.com/smartcontractkit/chainlink/tree/master/contracts) that make consuming data from oracles easier. For Chainlink VRF, you will use a contract called [`VRFConsumerBase`](https://github.com/smartcontractkit/chainlink/blob/master/contracts/src/v0.8/VRFConsumerBase.sol) which needs to be imported and extended from the contract you create.
 =======
 Chainlink maintains a <a href="https://github.com/smartcontractkit/chainlink/tree/master/contracts" target="_blank">library of contracts</a> that make consuming data from oracles easier. For Chainlink VRF, we use a contract called <a href="https://github.com/smartcontractkit/chainlink/blob/master/contracts/src/v0.8/VRFConsumerBase.sol" target="_blank">`VRFConsumerBase`</a>, which needs to be imported and extended from.
 >>>>>>> Remove hard-coded Solidity versions from Remix links.
+=======
+Chainlink maintains a [library of contracts](https://github.com/smartcontractkit/chainlink/tree/master/contracts) that make consuming data from oracles easier. For Chainlink VRF, we use a contract called [`VRFConsumerBase`](https://github.com/smartcontractkit/chainlink/blob/master/contracts/src/v0.8/VRFConsumerBase.sol) which needs to be imported and extended from the contract we create.
+>>>>>>> update tutorials format
 
 ```solidity
 pragma solidity 0.6.7;
@@ -132,7 +178,11 @@ For the contract to keep track of addresses that roll the dice, the contract wil
 
 ## Initializing the Contract
 
+<<<<<<< HEAD
 The fee and the key hash must be initialized in the constructor of our contract. To use `VRFConsumerBase` properly you must also pass certain values into its constructor.
+=======
+The fee and the key hash must be initialized in the constructor of our contract. To use `VRFConsumerBase` properly we also need to pass certain values into its constructor as well.
+>>>>>>> update tutorials format
 
 ```solidity
 pragma solidity 0.8.7;
@@ -169,11 +219,16 @@ The `rollDice` function will complete the following tasks:
 4. Store the `requestId` and roller address.
 5. Emit an event to signal that the die is rolling.
 
+<<<<<<< HEAD
 You must add a `ROLL_IN_PROGRESS` variable to signify that the die has been rolled but the result is not yet returned and a `DiceRolled` event to the contract.
+=======
+We will add a `ROLL_IN_PROGRESS` variable to signify that the die has been rolled but the result is not yet returned and a `DiceRolled` event to the contract.
+>>>>>>> update tutorials format
 
 ```solidity
 pragma solidity 0.8.7;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 import "@chainlink/contracts/src/v0.8/VRFConsumerBase.sol";
 =======
@@ -181,11 +236,15 @@ import "@chainlink/contracts/src/v0.8/VRFConsumerBase.sol";
 // { variables we've already written }
 // ...
 >>>>>>> Remove hard-coded Solidity versions from Remix links.
+=======
+import "@chainlink/contracts/src/v0.8/VRFConsumerBase.sol";
+>>>>>>> update tutorials format
 
 contract VRFD20 is VRFConsumerBase, ConfirmedOwner(msg.sender) {
     // variables
     uint256 private constant ROLL_IN_PROGRESS = 42;
     // ...
+<<<<<<< HEAD
     // { variables that are already written }
     // ...
 
@@ -197,6 +256,13 @@ contract VRFD20 is VRFConsumerBase, ConfirmedOwner(msg.sender) {
 // { constructor }
 // ...
 >>>>>>> Remove hard-coded Solidity versions from Remix links.
+=======
+    // { variables we've already written }
+    // ...
+
+    // DiceRolled event
+    event DiceRolled(bytes32 indexed requestId, address indexed roller);
+>>>>>>> update tutorials format
 
     // ...
     // { constructor }
@@ -209,6 +275,7 @@ contract VRFD20 is VRFConsumerBase, ConfirmedOwner(msg.sender) {
 
         // checking if roller has already rolled die
         require(s_results[roller] == 0, "Already rolled");
+<<<<<<< HEAD
 
         // requesting randomness
         requestId = requestRandomness(s_keyHash, s_fee);
@@ -226,6 +293,25 @@ contract VRFD20 is VRFConsumerBase, ConfirmedOwner(msg.sender) {
 ## `fulfillRandomness` Function
 
 `fulfillRandomness` is a special function defined within the `VRFConsumerBase` contract that our contract extends from. The coordinator sends the result of our generated randomness back to `fulfillRandomness`. You will implement some functionality here to deal with the result:
+=======
+
+        // requesting randomness
+        requestId = requestRandomness(s_keyHash, s_fee);
+
+        // storing requestId and roller address
+        s_rollers[requestId] = roller;
+
+        // emitting event to signal rolling of die
+        s_results[roller] = ROLL_IN_PROGRESS;
+        emit DiceRolled(requestId, roller);
+    }
+}
+```
+
+## `fulfillRandomness` Function
+
+`fulfillRandomness` is a special function defined within the `VRFConsumerBase` contract that our contract extends from. The coordinator sends the result of our generated randomness back to `fulfillRandomness`. We will implement some functionality here to deal with the result:
+>>>>>>> update tutorials format
 
 1. Transform the result to a number between 1 and 20 inclusively.
 2. Assign the transformed value to the address in the `s_results` mapping variable.
@@ -233,6 +319,7 @@ contract VRFD20 is VRFConsumerBase, ConfirmedOwner(msg.sender) {
 
 ```solidity
 pragma solidity 0.8.7;
+<<<<<<< HEAD
 
 import "@chainlink/contracts/src/v0.8/VRFConsumerBase.sol";
 
@@ -245,6 +332,20 @@ contract VRFD20 is VRFConsumerBase, ConfirmedOwner(msg.sender) {
     event DiceRolled(bytes32 indexed requestId, address indexed roller);
     event DiceLanded(bytes32 indexed requestId, uint256 indexed result);
 
+=======
+
+import "@chainlink/contracts/src/v0.8/VRFConsumerBase.sol";
+
+contract VRFD20 is VRFConsumerBase, ConfirmedOwner(msg.sender) {
+    // ...
+    // { variables }
+    // ...
+
+    // events
+    event DiceRolled(bytes32 indexed requestId, address indexed roller);
+    event DiceLanded(bytes32 indexed requestId, uint256 indexed result);
+
+>>>>>>> update tutorials format
     // ...
     // { constructor }
     // ...
@@ -328,7 +429,11 @@ contract VRFD20 is VRFConsumerBase, ConfirmedOwner(msg.sender) {
 }
 ```
 
+<<<<<<< HEAD
 You have now completed all necessary functions to generate randomness and assign the user a *Game of Thrones* house. We've added a few helper functions in there which should make using the contract easier and more flexible. You can deploy and interact with the complete contract in Remix:
+=======
+We've now implemented all necessary functions to generate randomness and assign the user a *Game of Thrones* house. We've added a few helper functions in there which should make using the contract easier and more flexible. You can deploy and interact with the complete contract in Remix:
+>>>>>>> update tutorials format
 
 <div class="remix-callout">
   <a href="https://remix.ethereum.org/#url=https://docs.chain.link/samples/VRF/VRFD20.sol" target="_blank" class="cl-button--ghost solidity-tracked">Deploy this contract using Remix ↗</a>
@@ -337,7 +442,11 @@ You have now completed all necessary functions to generate randomness and assign
 
 # 5. How do I deploy to testnet?
 
+<<<<<<< HEAD
 You will now deploy your completed contract. This deployment is slightly different than the example in the [The Basics: Using Data Feeds](/docs/beginners-tutorial/#7-how-do-i-deploy-to-testnet) tutorial. In our case, you will have to pass in parameters to the constructor upon deployment.
+=======
+We will now deploy our completed contract. This deployment is slightly different than the example in the [The Basics: Using Data Feeds](/docs/beginners-tutorial/#7-how-do-i-deploy-to-testnet) tutorial. In our case, we have to pass in parameters to the constructor upon deployment.
+>>>>>>> update tutorials format
 
 Once compiled, you'll see a menu that looks like this in the deploy pane:
 
@@ -360,6 +469,7 @@ These are the coordinator address, LINK address, key hash, and fee. Click deploy
 > 📘 Address, Key Hashes and more
 >
 > For a full reference of the addresses, key hashes and fees for each network, see [VRF Contracts](../vrf-contracts/).
+<<<<<<< HEAD
 >>>>>>> Remove hard-coded Solidity versions from Remix links.
 
 <<<<<<< HEAD
@@ -377,6 +487,16 @@ Once deployed, the contract is almost ready to go! However, it can't request any
 # 6. How do I obtain testnet LINK?
 
 Since the contract is on testnet, as with Kovan ETH, you don't need to purchase *real* LINK. Testnet LINK can be requested and obtained from a [faucet](../link-token-contracts/).
+=======
+
+**Note**: You should [have some Kovan ETH](/docs/beginners-tutorial/#obtaining-testnet-eth) in your Metamask account to pay for the GAS.
+
+At this point, our contract should be successfully deployed. However, it can't request anything yet since it doesn't own LINK. If we hit `rollDice` with no LINK, the transaction will revert.
+
+# 6. How do I obtain testnet LINK?
+
+Since the contract is on testnet, as with Kovan ETH, we don't need to purchase *real* LINK. Testnet LINK can be requested and obtained from a [faucet](../link-token-contracts/).
+>>>>>>> update tutorials format
 
 Use your Metamask address on the Kovan network to request LINK and send 1 LINK to the contract address. This address can be found in Remix under *Deployed Contracts* on the bottom left.
 
@@ -394,6 +514,7 @@ You will have to wait a few minutes for your transaction to confirm and the resp
 
 # 8. Further Reading
 
+<<<<<<< HEAD
 To read more about generating random numbers in Solidity, read our blog posts:
 
 - [35+ Blockchain RNG Use Cases Enabled by Chainlink VRF](https://blog.chain.link/blockchain-rng-use-cases-enabled-by-chainlink-vrf/)
@@ -401,3 +522,6 @@ To read more about generating random numbers in Solidity, read our blog posts:
 - [Chainlink VRF Now Live on Ethereum Mainnet](https://blog.chain.link/chainlink-vrf-now-live-on-ethereum-mainnet/)
 
 To explore more applications of Chainlink VRF, check out our [other tutorials](/docs/other-tutorials/#vrf-applications).
+=======
+To read more about generating random numbers in Solidity, read our [blog post](https://blog.chain.link/random-number-generation-solidity/). To explore more applications of Chainlink VRF, check out our [other tutorials](/docs/other-tutorials/#vrf-applications).
+>>>>>>> update tutorials format
