@@ -229,6 +229,7 @@ module.exports = {
               {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 title: 'The Basics: Data Feeds',
 =======
                 title: 'The Basics: Using Data Feeds',
@@ -236,6 +237,9 @@ module.exports = {
 =======
                 title: 'The Basics: Data Feeds',
 >>>>>>> Apply suggestions from code review
+=======
+                title: 'The Basics: Data Feeds',
+>>>>>>> 2c20c3b544268f45f4854a79a8fd47f0cba382cf
                 url: '/docs/beginners-tutorial/',
               },
               {

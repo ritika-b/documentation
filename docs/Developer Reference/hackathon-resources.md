@@ -23,6 +23,7 @@ Be sure to check the docs above for remix examples!
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 Always refer back to the [getting help](/docs/getting-help) page for the latest information about how to get support.
 =======
 Always refer back to the [getting help](/docs/getting-help) page for the latest information about how to get support. 
@@ -30,6 +31,9 @@ Always refer back to the [getting help](/docs/getting-help) page for the latest 
 =======
 Always refer back to the [getting help](/docs/getting-help) page for the latest information about how to get support.
 >>>>>>> Update v2 Job Specs docs for 1.0.0 nodes.
+=======
+Always refer back to the [getting help](/docs/getting-help) page for the latest information about how to get support.
+>>>>>>> 2c20c3b544268f45f4854a79a8fd47f0cba382cf
 
 - [Getting Help](/docs/getting-help))
 - [Stack Overflow](https://stackoverflow.com/questions/tagged/chainlink)
@@ -69,6 +73,7 @@ New? Start with [Beginners - The Basics](../beginners-tutorial/), and follow eve
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 - [Matic Data Feeds](../matic-addresses/)
 - [Binance Smart Chain Data Feeds](../binance-smart-chain-addresses/)
 =======
@@ -79,4 +84,8 @@ New? Start with [Beginners - The Basics](../beginners-tutorial/), and follow eve
 - [Matic Data Feeds](../matic-addresses/)
 - [Binance Smart Chain Data Feeds](../binance-smart-chain-addresses/)
 >>>>>>> Update v2 Job Specs docs for 1.0.0 nodes.
+=======
+- [Matic Data Feeds](../matic-addresses/)
+- [Binance Smart Chain Data Feeds](../binance-smart-chain-addresses/)
+>>>>>>> 2c20c3b544268f45f4854a79a8fd47f0cba382cf
 - [Conflux](https://github.com/Conflux-Network-Global/demo-cfx-chainlink)

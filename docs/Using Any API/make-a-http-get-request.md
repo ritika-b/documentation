@@ -75,6 +75,7 @@ If you need to return a string, use `bytes32`. <a href="https://gist.github.com/
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 The data type returned by a specific job depends on the [tasks](/docs/tasks/) that it supports. Make sure to choose an oracle job that supports the data type that your contract needs to consume.
 =======
 The data type returned by a specific job depends on the [adapters](../core-adapters/) that it supports. Make sure to choose an oracle job that supports the data type that your contract needs to consume.
@@ -82,6 +83,9 @@ The data type returned by a specific job depends on the [adapters](../core-adapt
 =======
 The data type returned by a specific job depends on the [tasks](/docs/tasks/) that it supports. Make sure to choose an oracle job that supports the data type that your contract needs to consume.
 >>>>>>> Update v2 Job Specs docs for 1.0.0 nodes.
+=======
+The data type returned by a specific job depends on the [tasks](/docs/tasks/) that it supports. Make sure to choose an oracle job that supports the data type that your contract needs to consume.
+>>>>>>> 2c20c3b544268f45f4854a79a8fd47f0cba382cf
 
 # Choosing an Oracle Job without specifying the URL
 

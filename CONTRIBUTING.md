@@ -99,6 +99,7 @@ Note, you have to include only samples that represent the main Chainlink product
 - When writing an additional note, start it with **Note:**.
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 - For a comprehensive guide on how to write tutorials specifically, use our [template guide](/TEMPLATE.md).
 - Use a consistent voice. When writing documentation, avoid first person plural (we) and opt for second person singular (you). Avoid passive voice.
 =======
@@ -108,3 +109,7 @@ Note, you have to include only samples that represent the main Chainlink product
 - For a comprehensive guide on how to write tutorials specifically, use our [template guide](/TEMPLATE.md).
 - Use a consistent voice. When writing documentation, avoid first person plural (we) and opt for second person singular (you). Avoid passive voice.
 >>>>>>> update guides
+=======
+- For a comprehensive guide on how to write tutorials specifically, use our [template guide](/TEMPLATE.md).
+- Use a consistent voice. When writing documentation, avoid first person plural (we) and opt for second person singular (you). Avoid passive voice.
+>>>>>>> 2c20c3b544268f45f4854a79a8fd47f0cba382cf
