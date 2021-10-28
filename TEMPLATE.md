@@ -33,7 +33,7 @@ metadata:
 
 # Overview <!-- omit in toc -->
 
-*Write 1-4 sentences on what this tutorial covers. Focus on the end result of the tutorial and the overarching concepts a user will learn about/implement.*
+*Write 1-4 sentences on what this tutorial covers. Focus on the end result of the tutorial and the overarching concepts a user will learn about/implement. Throughout the entire piece, make sure to use second person singular (you). This should be consistent throughout the entire document, but exceptions can be made. Avoid passive voice as well. Remember, anyone reading the tutorial should interpret it as a source of truth. Make sure to write in a voice which is factual and objective.*
 
 *Example:*
 In this tutorial, you will write and deploy a Chainlink smart contract to an Ethereum testnet.

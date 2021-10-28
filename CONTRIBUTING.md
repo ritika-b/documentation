@@ -98,3 +98,4 @@ Note, you have to include only samples that represent the main Chainlink product
 - Use markdown over HTML wherever possible.
 - When writing an additional note, start it with **Note:**.
 - For a comprehensive guide on how to write tutorials specifically, use our [template guide](/TEMPLATE.md).
+- Use a consistent voice. When writing documentation, avoid first person plural (we) and opt for second person singular (you). Avoid passive voice.
