@@ -64,7 +64,7 @@ For example, if the current price of Chainlink VRF is 0.1 LINK, the requesting c
 
 # 4. How can I use Chainlink VRF?
 
-To see a basic implementation of Chainlink VRF, see [Get a Random Number](../get-a-random-number/). In this section, we'll be creating an application which utilizes Chainlink VRF to generate randomness. We'll start by creating a contract with a [*Game of Thrones*](https://en.wikipedia.org/wiki/Game_of_Thrones) theme. 
+To see a basic implementation of Chainlink VRF, see [Get a Random Number](../get-a-random-number/). In this section, you will create an application which utilizes Chainlink VRF to generate randomness. The contract used in this application will have  a [*Game of Thrones*](https://en.wikipedia.org/wiki/Game_of_Thrones) theme. 
 
 The contract will request randomness from Chainlink VRF. The result of the randomness will transform into a number between 1 and 20, mimicking the rolling of a 20 sided die. Each number represents a *Game of Thrones* house. If the dies land on the value 1, the user is assigned house Targaryan, 2 for Lannister, and so on. A full list of houses can be found [here](https://gameofthrones.fandom.com/wiki/Great_House).
 
@@ -79,7 +79,7 @@ The contract will have the following functions:
 
 ## Importing `VRFConsumerBase`
 
-Chainlink maintains a [library of contracts](https://github.com/smartcontractkit/chainlink/tree/master/contracts) that make consuming data from oracles easier. For Chainlink VRF, we use a contract called [`VRFConsumerBase`](https://github.com/smartcontractkit/chainlink/blob/master/contracts/src/v0.8/VRFConsumerBase.sol) which needs to be imported and extended from the contract we create.
+Chainlink maintains a [library of contracts](https://github.com/smartcontractkit/chainlink/tree/master/contracts) that make consuming data from oracles easier. For Chainlink VRF, you will use a contract called [`VRFConsumerBase`](https://github.com/smartcontractkit/chainlink/blob/master/contracts/src/v0.8/VRFConsumerBase.sol) which needs to be imported and extended from the contract you create.
 
 ```solidity
 pragma solidity 0.6.7;
@@ -112,7 +112,7 @@ For the contract to keep track of addresses that roll the dice, the contract wil
 
 ## Initializing the Contract
 
-The fee and the key hash must be initialized in the constructor of our contract. To use `VRFConsumerBase` properly we also need to pass certain values into its constructor as well.
+The fee and the key hash must be initialized in the constructor of our contract. To use `VRFConsumerBase` properly you must also pass certain values into its constructor.
 
 ```solidity
 pragma solidity 0.8.7;
@@ -149,7 +149,7 @@ The `rollDice` function will complete the following tasks:
 4. Store the `requestId` and roller address.
 5. Emit an event to signal that the die is rolling.
 
-We will add a `ROLL_IN_PROGRESS` variable to signify that the die has been rolled but the result is not yet returned and a `DiceRolled` event to the contract.
+You must add a `ROLL_IN_PROGRESS` variable to signify that the die has been rolled but the result is not yet returned and a `DiceRolled` event to the contract.
 
 ```solidity
 pragma solidity 0.8.7;
@@ -160,7 +160,7 @@ contract VRFD20 is VRFConsumerBase, ConfirmedOwner(msg.sender) {
     // variables
     uint256 private constant ROLL_IN_PROGRESS = 42;
     // ...
-    // { variables we've already written }
+    // { variables that are already written }
     // ...
 
     // DiceRolled event
@@ -193,7 +193,7 @@ contract VRFD20 is VRFConsumerBase, ConfirmedOwner(msg.sender) {
 
 ## `fulfillRandomness` Function
 
-`fulfillRandomness` is a special function defined within the `VRFConsumerBase` contract that our contract extends from. The coordinator sends the result of our generated randomness back to `fulfillRandomness`. We will implement some functionality here to deal with the result:
+`fulfillRandomness` is a special function defined within the `VRFConsumerBase` contract that our contract extends from. The coordinator sends the result of our generated randomness back to `fulfillRandomness`. You will implement some functionality here to deal with the result:
 
 1. Transform the result to a number between 1 and 20 inclusively.
 2. Assign the transformed value to the address in the `s_results` mapping variable.
@@ -296,7 +296,7 @@ contract VRFD20 is VRFConsumerBase, ConfirmedOwner(msg.sender) {
 }
 ```
 
-We've now implemented all necessary functions to generate randomness and assign the user a *Game of Thrones* house. We've added a few helper functions in there which should make using the contract easier and more flexible. You can deploy and interact with the complete contract in Remix:
+You have now completed all necessary functions to generate randomness and assign the user a *Game of Thrones* house. We've added a few helper functions in there which should make using the contract easier and more flexible. You can deploy and interact with the complete contract in Remix:
 
 <div class="remix-callout">
   <a href="https://remix.ethereum.org/#url=https://docs.chain.link/samples/VRF/VRFD20.sol" target="_blank" class="cl-button--ghost solidity-tracked">Deploy this contract using Remix ↗</a>
@@ -305,7 +305,7 @@ We've now implemented all necessary functions to generate randomness and assign 
 
 # 5. How do I deploy to testnet?
 
-We will now deploy our completed contract. This deployment is slightly different than the example in the [The Basics: Using Data Feeds](/docs/beginners-tutorial/#7-how-do-i-deploy-to-testnet) tutorial. In our case, we have to pass in parameters to the constructor upon deployment.
+You will now deploy your completed contract. This deployment is slightly different than the example in the [The Basics: Using Data Feeds](/docs/beginners-tutorial/#7-how-do-i-deploy-to-testnet) tutorial. In our case, you will have to pass in parameters to the constructor upon deployment.
 
 Once compiled, you'll see a menu that looks like this in the deploy pane:
 
@@ -322,11 +322,11 @@ These are the coordinator address, LINK address, key hash, and fee. For a full r
 
 **Note**: You should [have some Kovan ETH](/docs/beginners-tutorial/#obtaining-testnet-eth) in your Metamask account to pay for the GAS.
 
-At this point, our contract should be successfully deployed. However, it can't request anything yet since it doesn't own LINK. If we hit `rollDice` with no LINK, the transaction will revert.
+At this point, your contract should be successfully deployed. However, it can't request anything yet since it doesn't own LINK. If you click `rollDice` with no LINK, the transaction will revert.
 
 # 6. How do I obtain testnet LINK?
 
-Since the contract is on testnet, as with Kovan ETH, we don't need to purchase *real* LINK. Testnet LINK can be requested and obtained from a [faucet](../link-token-contracts/).
+Since the contract is on testnet, as with Kovan ETH, you don't need to purchase *real* LINK. Testnet LINK can be requested and obtained from a [faucet](../link-token-contracts/).
 
 Use your Metamask address on the Kovan network to request LINK and send 1 LINK to the contract address. This address can be found in Remix under *Deployed Contracts* on the bottom left.
 
