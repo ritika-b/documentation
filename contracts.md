@@ -1,7 +1,7 @@
 ---
 layout: nodes.liquid
 section: smartContract
-title: "Chainlink Smart Contract Docs"
+title: "Chainlink Smart Contract Documentation"
 date: Last Modified
 permalink: /
 ---
@@ -10,30 +10,10 @@ permalink: /
   <div class="markdown-body">
     <div class="cl-section-header">
       <p>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> Apply suggestions from code review
-=======
->>>>>>> 2c20c3b544268f45f4854a79a8fd47f0cba382cf
         Chainlink turns your smart contracts into hybrid smart contracts, giving them access to real-world data and services while maintaining the security and reliability guarantees inherent to blockchain technology.
       </p>
       <p>
         Learn more about Chainlink's products and services with our step‑by‑step tutorials and documentation:
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-        Chainlink turns your smart contracts into hybrid smart contracts, giving them access to real-world data and services while maintaining the security and reliability guarantees inherent to blockchain technology.<br><br>Learn more about Chainlink's products and services with our step‑by‑step tutorials and documentation:
->>>>>>> Update "The Basics" tutorial and docs homepage
-=======
-        Chainlink turns your smart contracts into hybrid smart contracts, giving them access to real-world data and services while maintaining the security and reliability guarantees inherent to blockchain technology.<p>Learn more about Chainlink's products and services with our step‑by‑step tutorials and documentation:
->>>>>>> Update hyperlinks to md & changed <p> tag homepage
-=======
->>>>>>> Apply suggestions from code review
-=======
->>>>>>> 2c20c3b544268f45f4854a79a8fd47f0cba382cf
       </p>
     </div>
     <div class="cl-featuredcard">
@@ -108,11 +88,6 @@ permalink: /
         <div>
           <div>
             <h3>New to Ethereum and Smart Contracts?</h3>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 2c20c3b544268f45f4854a79a8fd47f0cba382cf
             <p>
               Build your first smart contract connected to off-chain data feeds. 
             </p>
@@ -124,20 +99,6 @@ permalink: /
         <div>
           <div>
             <h3>Chainlink Architecture Overview</h3>
-<<<<<<< HEAD
->>>>>>> Update "The Basics" tutorial and docs homepage
-            <p>
-              Build your first smart contract connected to off-chain data feeds. 
-            </p>
-          </div>
-          <a href="/docs/beginners-tutorial" class="cl-button--ghost">
-            Start Building
-          </a>
-        </div>
-<<<<<<< HEAD
-        <div>
-          <div>
-            <h3>Chainlink Architecture Overview</h3>
             <p>
               Discover how the Chainlink ecosystem bridges the gap between
               off-chain data and smart contracts.
@@ -145,16 +106,6 @@ permalink: /
           </div>
           <a href="/docs/architecture-overview" class="cl-button--ghost">
             Architecture
-=======
-            <p>
-              Discover how the Chainlink ecosystem bridges the gap between
-              off-chain data and smart contracts.
-            </p>
-          </div>
-          <a href="/docs/architecture-overview" class="cl-button--ghost">
-            Architecture
-<<<<<<< HEAD
->>>>>>> 2c20c3b544268f45f4854a79a8fd47f0cba382cf
           </a>
         </div>
       </div>
@@ -171,7 +122,6 @@ permalink: /
                 class="cl-image-featured"
               />
               <h3>Contracts ↗</h3>
-<<<<<<< HEAD
             </a>
           </div>
           <div class="cl-productcard">
@@ -186,30 +136,11 @@ permalink: /
               <h3>Test Helpers ↗</h3>
             </a>
           </div>
-=======
-            </a>
-          </div>
-          <div class="cl-productcard">
-            <a
-              href="https://www.npmjs.com/package/@chainlink/test-helpers"
-              target="_blank"
-              class="fill-div">
-              <img
-                src="https://uploads-ssl.webflow.com/5e444500cbc42eeb5198206f/5e7116765b27d4521f92bac6_Tester.svg"
-                class="cl-image-featured"
-              />
-              <h3>Test Helpers ↗</h3>
-            </a>
-          </div>
->>>>>>> 2c20c3b544268f45f4854a79a8fd47f0cba382cf
         </div>
       </div>
     </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 2c20c3b544268f45f4854a79a8fd47f0cba382cf
     <div class="cl-section cl-section--tools">
       <h3>Explore Chainlink Developer Tools</h3>
       <div style="display: flex;">
@@ -223,68 +154,19 @@ permalink: /
               class="cl-image-featured"
             />
             <h3>Contracts ↗</h3>
-=======
->>>>>>> 411ad6613eac99906643b6e1563b06aacee07fbe
           </a>
-=======
-      </div>
-      <div class="cl-section cl-section--tools">
-        <h3>Explore Chainlink Developer Tools</h3>
-        <div style="display: flex;">
-          <div class="cl-productcard">
-            <a
-              href="https://www.npmjs.com/package/@chainlink/contracts"
-              target="_blank"
-              class="fill-div">
-              <img
-                src="https://uploads-ssl.webflow.com/5e444500cbc42eeb5198206f/5e711675d22595473f1c0c20_Contract.svg"
-                class="cl-image-featured"
-              />
-              <h3>Contracts ↗</h3>
-            </a>
-          </div>
-          <div class="cl-productcard">
-            <a
-              href="https://www.npmjs.com/package/@chainlink/test-helpers"
-              target="_blank"
-              class="fill-div">
-              <img
-                src="https://uploads-ssl.webflow.com/5e444500cbc42eeb5198206f/5e7116765b27d4521f92bac6_Tester.svg"
-                class="cl-image-featured"
-              />
-              <h3>Test Helpers ↗</h3>
-            </a>
-          </div>
->>>>>>> updating hyperlinks and titles/subtitles and TOC
         </div>
-      </div>
-      <div class="cl-section cl-section--tools">
-        <h3>Explore Chainlink Developer Tools</h3>
-        <div style="display: flex;">
-          <div class="cl-productcard">
-            <a
-              href="https://www.npmjs.com/package/@chainlink/contracts"
-              target="_blank"
-              class="fill-div">
-              <img
-                src="https://uploads-ssl.webflow.com/5e444500cbc42eeb5198206f/5e711675d22595473f1c0c20_Contract.svg"
-                class="cl-image-featured"
-              />
-              <h3>Contracts ↗</h3>
-            </a>
-          </div>
-          <div class="cl-productcard">
-            <a
-              href="https://www.npmjs.com/package/@chainlink/test-helpers"
-              target="_blank"
-              class="fill-div">
-              <img
-                src="https://uploads-ssl.webflow.com/5e444500cbc42eeb5198206f/5e7116765b27d4521f92bac6_Tester.svg"
-                class="cl-image-featured"
-              />
-              <h3>Test Helpers ↗</h3>
-            </a>
-          </div>
+        <div class="cl-productcard">
+          <a
+            href="https://www.npmjs.com/package/@chainlink/test-helpers"
+            target="_blank"
+            class="fill-div">
+            <img
+              src="https://uploads-ssl.webflow.com/5e444500cbc42eeb5198206f/5e7116765b27d4521f92bac6_Tester.svg"
+              class="cl-image-featured"
+            />
+            <h3>Test Helpers ↗</h3>
+          </a>
         </div>
       </div>
     </div>
@@ -311,10 +193,7 @@ permalink: /
     </div>
 =======
 >>>>>>> Update "The Basics" tutorial and docs homepage
-<<<<<<< HEAD
 =======
 >>>>>>> Update "The Basics" tutorial and docs homepage
-=======
->>>>>>> 2c20c3b544268f45f4854a79a8fd47f0cba382cf
   </div>
 </div>

@@ -10,44 +10,15 @@ metadata:
   image:
     0: "insert image here"
 ---
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-*This doc is meant to be used as a template for creating a tutorial doc. Users should emulate the structure of this document when creating their own templates. The content of this doc comes from beginners-tutorial.md.*
-=======
-*This doc is meant to be used as a template for creating a tutorial doc. Users should emulate the structure of this document when creating their own templates. The content of this doc comes from beginners-tutoral.md.*
->>>>>>> update template guide
-
-<<<<<<< HEAD
-*Prerequisites should have its own block at the beginning of the tutorial. Make sure to tell the user what knowledge they should already have and where to go if they need previous reading. Make sure to direct them to other docs pages.*
-=======
-
->>>>>>> update tutorials format
-=======
-*Prerequisites should have its own code block at the beginning of the tutorial. Make sure to tell the user what knowledge they should already have and where to go if they need previous reading. Make sure to direct them to other docs pages.*
->>>>>>> update template
-=======
 *This doc is meant to be used as a template for creating a tutorial doc. Users should emulate the structure of this document when creating their own templates. The content of this doc comes from beginners-tutorial.md.*
 
 *Prerequisites should have its own block at the beginning of the tutorial. Make sure to tell the user what knowledge they should already have and where to go if they need previous reading. Make sure to direct them to other docs pages.*
->>>>>>> update template
-=======
-*This doc is meant to be used as a template for creating a tutorial doc. Users should emulate the structure of this document when creating their own templates. The content of this doc comes from beginners-tutorial.md.*
-
-*Prerequisites should have its own block at the beginning of the tutorial. Make sure to tell the user what knowledge they should already have and where to go if they need previous reading. Make sure to direct them to other docs pages.*
->>>>>>> 2c20c3b544268f45f4854a79a8fd47f0cba382cf
 > 👍 Prerequisites
 >
 > This tutorial requires .... If you're unfamiliar with these concepts, follow ...
 > or 
 > New to []? We'll walk you through...
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 2c20c3b544268f45f4854a79a8fd47f0cba382cf
 *If a tutorial has a corresponding YouTube tutorial, link it at the beginning of the page.*
 <p>
   https://www.youtube.com/watch?v=rFXSEEQG9YE
@@ -63,113 +34,30 @@ metadata:
 # Overview <!-- omit in toc -->
 
 *Write 1-4 sentences on what this tutorial covers. Focus on the end result of the tutorial and the overarching concepts a user will learn about/implement. Throughout the entire piece, make sure to use second person singular (you). This should be consistent throughout the entire document, but exceptions can be made. Avoid passive voice as well. Remember, anyone reading the tutorial should interpret it as a source of truth. Make sure to write in a voice which is factual and objective.*
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 *Example:*
-=======
-
-=======
-*If a tutorial has a corresponding YouTube tutorial, link it at the beginning of the page.*
->>>>>>> update template
-<p>
-  https://www.youtube.com/watch?v=rFXSEEQG9YE
-</p>
-
-*If a portion of the YouTube video is deprecated or out-of-date, add a note alerting the user.*
-
-> 🚧 Note
->
-> The video uses a seed phrase to request randomness. This feature has been deprecated. Please refer to the code in this tutorial for the most up to date procedures.
-
-
-# Overview <!-- omit in toc -->
-
-*Write 1-4 sentences on what this tutorial covers. Focus on the end result of the tutorial and the overarching concepts a user will learn about/implement.*
-=======
->>>>>>> update guides
-
-<<<<<<< HEAD
-Example:
->>>>>>> update tutorials format
-=======
-*Example:*
->>>>>>> update template
-=======
-
-*Example:*
->>>>>>> 2c20c3b544268f45f4854a79a8fd47f0cba382cf
 In this tutorial, you will write and deploy a Chainlink smart contract to an Ethereum testnet.
 
 **Table of Contents**
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 *Table of contents are generated automatically using vscode markdown: https://github.com/yzhang-gh/vscode-markdown make sure settings are changed so that only header1 are in TOC.*
-=======
-Table of contents are generated automatically using vscode markdown: https://github.com/yzhang-gh/vscode-markdown make sure settings are changed so that only header1 are in TOC
->>>>>>> update tutorials format
-=======
-*Table of contents are generated automatically using vscode markdown: https://github.com/yzhang-gh/vscode-markdown make sure settings are changed so that only header1 are in TOC.*
->>>>>>> update template
-=======
-*Table of contents are generated automatically using vscode markdown: https://github.com/yzhang-gh/vscode-markdown make sure settings are changed so that only header1 are in TOC.*
->>>>>>> 2c20c3b544268f45f4854a79a8fd47f0cba382cf
 
 + [1. What are smart contracts? What are data feeds?](#1-what-are-smart-contracts-what-are-data-feeds)
 + [2. What language is a smart contract written in?](#2-what-language-is-a-smart-contract-written-in)
 + [3. What does a smart contract look like?](#3-what-does-a-smart-contract-look-like)
 + [4. Further Reading](#4-further-reading)
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 *Remember to number each main header and use questions when possible. Make questions succinct and bold key terms in the answers. Link to relevant articles where possible and make sure there are no gaps in learning. Users should be able to use the article as a source of truth and not have to rely on external searches to understand the material of the article. Example:*
-=======
-*Remember to number each main header and use questions when possible. Make questions succinct and bold key terms in the answers. Link to relevant articles where possible and make sure there are no gaps in learning. User's should be able to use the article as a source of truth and not have to rely on external searches to understand the material of the article. Example:*
->>>>>>> update tutorials format
-=======
-*Remember to number each main header and use questions when possible. Make questions succinct and bold key terms in the answers. Link to relevant articles where possible and make sure there are no gaps in learning. Users should be able to use the article as a source of truth and not have to rely on external searches to understand the material of the article. Example:*
->>>>>>> update template
-=======
-*Remember to number each main header and use questions when possible. Make questions succinct and bold key terms in the answers. Link to relevant articles where possible and make sure there are no gaps in learning. Users should be able to use the article as a source of truth and not have to rely on external searches to understand the material of the article. Example:*
->>>>>>> 2c20c3b544268f45f4854a79a8fd47f0cba382cf
 
 # 1. What are smart contracts? What are data feeds?
 
 When deployed to a blockchain, a **smart contract** is a set of instructions that can be executed without intervention from third parties. The code of a smart contract determines how it responds to input, just like the code of any other computer program.
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 2c20c3b544268f45f4854a79a8fd47f0cba382cf
 A valuable feature of smart contracts is that they can store and manage on-chain assets (like [ETH or ERC20 tokens](https://ethereum.org/en/developers/docs/standards/tokens/erc-20/)), just like you can with an Ethereum wallet. Because they have an on-chain address like a wallet, they can do everything any other address can. This opens the door for programming automated actions when receiving and transferring assets.
 
 *Notice how users are given external links to read more about concepts such as ETH or ERC20 tokens. They do not have to undertake a separate search.*
 
 Smart contracts can connect to real-world market prices of assets to produce powerful applications. Chainlink's **[Data Feeds](../using-chainlink-reference-contracts/)** feature allows users to quickly and securely connect smart contracts to such assets in a single call. 
-<<<<<<< HEAD
-=======
-A valuable feature of smart contracts is that they can store and manage on-chain assets (like ETH or ERC20 tokens), just like you or I can with an Ethereum wallet. Because they have an on-chain address, like a wallet, they can do everything any other address can. This opens the door for programming automated actions when receiving and transferring assets.
-=======
-A valuable feature of smart contracts is that they can store and manage on-chain assets (like [ETH or ERC20 tokens](https://ethereum.org/en/developers/docs/standards/tokens/erc-20/)), just like you can with an Ethereum wallet. Because they have an on-chain address like a wallet, they can do everything any other address can. This opens the door for programming automated actions when receiving and transferring assets.
->>>>>>> update template
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-Smart contracts can connect to real-world market prices of assets to produce powerful applications. Chainlink's **[Data Feeds](../using-chainlink-reference-contracts/)** feature allows users to quickly and securely connect smart contracts to such assets in a single call. You can read more about the applications of data feeds [here](/docs/other-tutorials/#data-feeds-tutorials).
->>>>>>> update tutorials format
-=======
-=======
-*Notice how users are given external links to read more about concepts such as ETH or ERC20 tokens. They do not have to undertake a separate search.*
-
->>>>>>> update template
-Smart contracts can connect to real-world market prices of assets to produce powerful applications. Chainlink's **[Data Feeds](../using-chainlink-reference-contracts/)** feature allows users to quickly and securely connect smart contracts to such assets in a single call. 
->>>>>>> update template
-=======
->>>>>>> 2c20c3b544268f45f4854a79a8fd47f0cba382cf
 
 # 2. What language is a smart contract written in?
 
@@ -177,19 +65,7 @@ Smart contracts can connect to real-world market prices of assets to produce pow
 
 # 3. What does a smart contract look like?
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 *For code samples, be thorough. Redundancy is better than assuming the user have sufficient knowledge on a certain topic. Create markdown code samples wherever  applicable. Make sure to give context as to what each code sample is doing.*
-=======
-*For code samples, be thorough. Redundancy is better than assuming the user knows about a certain topic. Create markdown code samples wherever it is applicable. Make sure to give context as to what each code sample is doing*
->>>>>>> update tutorials format
-=======
-*For code samples, be thorough. Redundancy is better than assuming the user have sufficient knowledge on a certain topic. Create markdown code samples wherever  applicable. Make sure to give context as to what each code sample is doing.*
->>>>>>> update template
-=======
-*For code samples, be thorough. Redundancy is better than assuming the user have sufficient knowledge on a certain topic. Create markdown code samples wherever  applicable. Make sure to give context as to what each code sample is doing.*
->>>>>>> 2c20c3b544268f45f4854a79a8fd47f0cba382cf
 
 The structure of a smart contract is similar to that of a _class_ in Javascript, with a few differences. Let's take a look at this `HelloWorld` example.
 
@@ -228,9 +104,6 @@ This means that the code is written for Solidity version 0.7.0, or a newer versi
 
 # 4. Further Reading
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 To read more about data feeds, read our blog posts:
 
 - [Build a dApp on xDai Chain With Secure Data Feeds](https://blog.chain.link/build-a-dapp-on-xdai-chain-with-secure-data-feeds/)
@@ -238,26 +111,3 @@ To read more about data feeds, read our blog posts:
 - [The 3 Levels of Data Aggregation in Chainlink Price Feeds](https://blog.chain.link/levels-of-data-aggregation-in-chainlink-price-feeds/)
 
 To explore more applications of data feeds, check out our [other tutorials](/docs/other-tutorials/#data-feeds-applications).
-=======
-To read more about using Data Feeds, read our blog posts:
-=======
-To read more about data feeds, read our blog posts:
->>>>>>> update template
-=======
-To read more about data feeds, read our blog posts:
->>>>>>> 2c20c3b544268f45f4854a79a8fd47f0cba382cf
-
-- [Build a dApp on xDai Chain With Secure Data Feeds](https://blog.chain.link/build-a-dapp-on-xdai-chain-with-secure-data-feeds/)
-- [Build a dApp on Binance Smart Chain With Secure Data Feeds](https://blog.chain.link/build-a-dapp-on-binance-smart-chain-with-secure-data-feeds/)
-- [The 3 Levels of Data Aggregation in Chainlink Price Feeds](https://blog.chain.link/levels-of-data-aggregation-in-chainlink-price-feeds/)
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-To explore more applications of Data Feeds, check out our [other tutorials](/docs/other-tutorials/#data-feeds-applications).
->>>>>>> update tutorials format
-=======
-To explore more applications of data feeds, check out our [other tutorials](/docs/other-tutorials/#data-feeds-applications).
->>>>>>> update template
-=======
-To explore more applications of data feeds, check out our [other tutorials](/docs/other-tutorials/#data-feeds-applications).
->>>>>>> 2c20c3b544268f45f4854a79a8fd47f0cba382cf
