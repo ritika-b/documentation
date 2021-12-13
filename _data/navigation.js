@@ -5,50 +5,46 @@ module.exports = {
         section: 'Getting Started',
         contents: [
           {
-            title: 'Install, configure & fund MetaMask',
-            url: '/docs/install-metamask/',
+            title: 'Conceptual Overview',
+            url: '/docs/conceptual-overview/',
+          },
+          {
+            title: 'Deploy Your First Contract',
+            url: '/docs/deploy-your-first-contract/',
+          },
+          {
+            title: 'Consuming Data Feeds',
+            url: '/docs/consuming-data-feeds/',
+          },
+          {
+            title: 'Get Random Numbers',
+            url: '/docs/get-a-random-number/'
           },
           {
             title: 'Acquire testnet LINK',
             url: '/docs/acquire-link/',
           },
           {
-            title: 'Deploy your first contract',
-            url: '/docs/deploy-your-first-contract/',
-          },
-          {
-            title: 'Fund your contract',
+            title: 'Fund Your Contracts',
             url: '/docs/fund-your-contract/',
           },
-          {
-            title: 'Use your first contract!',
-            url: '/docs/use-your-first-contract/',
-          },
-        ],
-      },
-      {
-        section: 'Beginner Contracts',
-        contents: [
-          {
-            title: 'Use a Data Feed',
-            url: '/docs/beginners-tutorial/',
-          },
-          {
-            title: 'Random Numbers',
-            url: '/docs/intermediates-tutorial/',
-          },
-          {
-            title: 'API Calls',
-            url: '/docs/advanced-tutorial/',
-          }
         ],
       },
       {
         section: 'Resources',
         contents: [
           {
-            title: 'Learning Resources',
+            title: 'Videos and Tutorials',
             url: '/docs/other-tutorials/',
+          },
+        ],
+      },
+      {
+        section: 'Next Steps',
+        contents: [
+          {
+            title: 'Request Public API Data ↗',
+            url: '/docs/using-any-api/',
           },
         ],
       },
@@ -107,7 +103,7 @@ module.exports = {
         ],
       },
       {
-        section: 'USING DATA FEEDS',
+        section: 'DATA FEEDS',
         contents: [
           {
             title: 'Introduction to Data Feeds',
@@ -124,11 +120,14 @@ module.exports = {
           {
             title: 'Feed Registry',
             url: '/docs/feed-registry/',
-            filters: ['ethereum'],
           },
           {
             title: 'API Reference',
             url: '/docs/price-feeds-api-reference/',
+          },
+          {
+            title: 'Using ENS with Data Feeds',
+            url: '/docs/ens/'
           },
           {
             title: 'Contract Addresses',
@@ -187,7 +186,6 @@ module.exports = {
               {
                 title: 'Moonriver Data Feeds',
                 url: '/docs/data-feeds-moonriver/',
-                filters: ['moonriver'],
               },
             ],
           },
@@ -195,19 +193,14 @@ module.exports = {
       },
       {
         section: 'USING RANDOMNESS',
-        filters: [
-          'ethereum',
-          'binance',
-          'polygon',
-        ],
         contents: [
           {
             title: 'Introduction to Chainlink VRF',
             url: '/docs/chainlink-vrf/',
           },
           {
-            title: 'Get a Random Number',
-            url: '/docs/get-a-random-number/'
+            title: 'Example Contracts',
+            url: '/docs/get-a-random-number/',
           },
           {
             title: 'API Reference',
@@ -228,12 +221,15 @@ module.exports = {
         ],
       },
       {
-        section: 'USING ANY API',
-        filters: ['ethereum'],
+        section: 'Connect to any API',
         contents: [
           {
             title: 'Introduction to Using Any API',
             url: '/docs/request-and-receive-data/',
+          },
+          {
+            title: 'Using Any API',
+            url: '/docs/using-any-api/',
           },
           {
             title: 'Make a GET Request',
@@ -266,15 +262,10 @@ module.exports = {
         ],
       },
       {
-        section: 'USING CHAINLINK KEEPERS',
-        filters: [
-          'ethereum',
-          'binance',
-          'polygon',
-        ],
+        section: 'CHAINLINK KEEPERS',
         contents: [
           {
-            title: 'Introduction',
+            title: 'Introduction to Keepers',
             url: '/docs/chainlink-keepers/introduction/',
           },
           {
@@ -303,7 +294,11 @@ module.exports = {
         section: 'Resources',
         contents: [
           {
-            title: 'Install Instructions',
+            title: 'Videos and Tutorials',
+            url: '/docs/other-tutorials/',
+          },
+          {
+            title: 'Framework Install Instructions',
             url: '/docs/create-a-chainlinked-project/',
           },
           {
@@ -426,7 +421,7 @@ module.exports = {
             url: '/docs/enabling-https-connections/',
           },
           {
-            title: 'Best Security and Operating Practices',
+            title: 'Security and Operation Best Practices',
             url: '/docs/best-security-practices/',
           },
           {
@@ -462,6 +457,7 @@ module.exports = {
                 title: 'Flux Monitor',
                 url: '/docs/jobs/types/flux-monitor/',
               },
+
               {
                 title: 'Keeper',
                 url: '/docs/jobs/types/keeper/',

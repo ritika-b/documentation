@@ -5,7 +5,7 @@ date: Last Modified
 title: "Random Numbers: Using Chainlink VRF"
 permalink: "docs/intermediates-tutorial/"
 excerpt: "Using Chainlink VRF"
-whatsnext: {"Get a Random Number":"/docs/get-a-random-number/", "API Calls tutorial":"/docs/advanced-tutorial/"}
+whatsnext: {"Get a Random Number":"/docs/get-a-random-number/", "API Reference":"/docs/chainlink-vrf-api-reference/", "Contract Addresses":"/docs/vrf-contracts/"}
 metadata:
   title: "Random Numbers: Using Chainlink VRF"
   description: "Learn how to use randomness in your smart contracts using Chainlink VRF."
@@ -15,7 +15,7 @@ metadata:
 
 > 👍 Requirements
 >
-> This tutorial assumes that you have basic knowledge about Ethereum and writing and deploying smart contracts. If you are new to smart contract development, start with [The Basics: Data Feeds](../beginners-tutorial/) tutorial before starting this tutorial.
+> This guide assumes that you have basic knowledge about writing and deploying smart contracts. If you are new to smart contract development, read the [Getting Started Guide](/getting-started/) before you start this guide.
 
 <p>
   https://www.youtube.com/watch?v=JqZWariqh5s
@@ -27,7 +27,7 @@ metadata:
 
 # Overview
 
-In this tutorial, you will learn about generating randomness on blockchains. This includes learning how to implement a Request and Receive cycle with Chainlink oracles and how to consume random numbers with Chainlink VRF in smart contracts.
+In this guide, you will learn about generating randomness on blockchains. This includes learning how to implement a Request and Receive cycle with Chainlink oracles and how to consume random numbers with Chainlink VRF in smart contracts.
 
 **Table of Contents**
 
@@ -47,7 +47,7 @@ Randomness is very difficult to generate on blockchains. This is because every n
 
 # 2. What is the Request and Receive cycle?
 
-The [previous tutorial](../beginners-tutorial/) explained how to consume Chainlink Data Feeds, which consist of reference data posted on-chain by oracles. This data is stored in a contract and can be referenced by consumers until the oracle updates the data again.
+The [previous guide](/docs/consuming-data-feeds/) explained how to consume Chainlink Data Feeds, which consist of reference data posted on-chain by oracles. This data is stored in a contract and can be referenced by consumers until the oracle updates the data again.
 
 Randomness, on the other hand, cannot be reference data. If the result of randomness is stored on-chain, any actor could retrieve the value and predict the outcome. Instead, randomness must be requested from an oracle, which generates a number and a cryptographic proof. Then, the oracle returns that result to the contract that requested it. This sequence is known as the **[Request and Receive cycle](../architecture-request-model/)**.
 
@@ -295,16 +295,16 @@ contract VRFD20 is VRFConsumerBase, ConfirmedOwner(msg.sender) {
 }
 ```
 
-You have now completed all necessary functions to generate randomness and assign the user a *Game of Thrones* house. We've added a few helper functions in there to make using the contract easier and more flexible. You can deploy and interact with the complete contract in Remix:
-
 <div class="remix-callout">
-  <a href="https://remix.ethereum.org/#url=https://docs.chain.link/samples/VRF/VRFD20.sol" target="_blank" class="cl-button--ghost solidity-tracked">Deploy this contract using Remix ↗</a>
-    <a href="../deploy-your-first-contract/" title="">What is Remix?</a>
+  <a href="https://remix.ethereum.org/#url=https://docs.chain.link/samples/VRF/VRFD20.sol" target="_blank" >Deploy using Remix</a>
+  <a href="/docs/conceptual-overview/#what-is-remix" >What is Remix?</a>
 </div>
+
+You have now completed all necessary functions to generate randomness and assign the user a *Game of Thrones* house. We've added a few helper functions in there to make using the contract easier and more flexible. You can deploy and interact with the complete contract in Remix.
 
 # 5. How do I deploy to testnet?
 
-You will now deploy your completed contract. This deployment is slightly different than the example in the [The Basics: Using Data Feeds](/docs/beginners-tutorial/#7-how-do-i-deploy-to-testnet) tutorial. In our case, you will have to pass in parameters to the constructor upon deployment.
+You will now deploy your completed contract. This deployment is slightly different than the example in the [Deploy Your First Contract](/docs/deploy-your-first-contract/) guide. In our case, you will have to pass in parameters to the constructor upon deployment.
 
 Once compiled, you'll see a menu that looks like this in the deploy pane:
 
@@ -319,7 +319,7 @@ Click the caret arrow on the right hand side of **Deploy** to expand the paramet
 
 These are the coordinator address, LINK address, key hash, and fee. For a full reference of the addresses, key hashes, and fees for each network, see [VRF Contracts](../vrf-contracts/). Click deploy and use your Metamask account to confirm the transaction.
 
-**Note**: You should [have some Kovan ETH](/docs/beginners-tutorial/#obtaining-testnet-eth) in your Metamask account to pay for the GAS.
+**Note**: You should [have some Kovan ETH](/docs/deploy-your-first-contract/#install-and-fund-your-metamask-wallet) in your Metamask account to pay for the GAS.
 
 At this point, your contract should be successfully deployed. However, it can't request anything yet since it doesn't own LINK. If you click `rollDice` with no LINK, the transaction will revert.
 
