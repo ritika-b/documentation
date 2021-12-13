@@ -26,7 +26,7 @@ permalink: /binance/
           class="cl-image-featured"
         />
         <div>
-          <h3>Get Data Feeds in your Smart Contracts</h3>
+          <h3>Get Data Feeds ins your Smart Contracts</h3>
           <p>
             Retrieve the latest prices and data points of assets in your smart
             contracts.
