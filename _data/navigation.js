@@ -252,8 +252,12 @@ module.exports = {
             url: '/docs/chainlink-keepers/register-upkeep/',
           },
           {
-            title: 'Utility Contracts',
+            title: 'Utility Contracts: ethBalanceMonitor',
             url: '/docs/chainlink-keepers/utility-contracts/'
+          },
+          {
+            title: 'Utility Contracts: Cron Jobs',
+            url: '/docs/chainlink-keepers/cron-contracts/'
           },
           {
             title: 'Network Overview',
