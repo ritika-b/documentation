@@ -11,7 +11,7 @@ whatsnext:
 
 # Overview
 
-This guide explains how to register a Keeper-compatible contract with the Chainlink Keeper Network. To find more information about deploying a Keeper-compatible contract, see the [Making Compatible Contracts](../compatible-contracts) page. Register your contracts in the Chainlink Keepers App:
+This guide explains how to register a Keeper-compatible contract with the Chainlink Keeper Network. To find more information about deploying a Keeper-compatible contract, see the [Making Compatible Contracts](../compatible-contracts) page. Register your contracts in the Chainlink Keepers App:  
 
 <div class="remix-callout">
     <a href="https://keepers.chain.link" >Open the Chainlink Keepers App</a>
@@ -20,14 +20,13 @@ This guide explains how to register a Keeper-compatible contract with the Chainl
 After you register, you can interact directly with the [registry contract](https://etherscan.io/address/0x7b3EC232b08BD7b4b3305BE0C044D907B2DF960B#code) functions such as `cancelUpkeep` and `addFunds`.
 
 **Table of Contents**
++ [Overview](#overview)
 + [Register Contract](#register-contract)
 + [Fund Upkeep](#fund-upkeep)
 + [How Funding Works](#how-funding-works)
 + [Maintain a Minimum Balance](#maintain-a-minimum-balance)
 + [Registration Completion](#registration-completion)
 + [Useful Patterns](#useful-patterns)
-  + [Gas Limits](#gas-limits)
-  + [Testing](#testing)
 
 # Register Contract
 
