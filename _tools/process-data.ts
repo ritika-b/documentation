@@ -21,6 +21,7 @@ interface DataFile {
         relativeDeviationThresholdPPB: string;
       };
       docsHidden?: boolean;
+      transmissionsAccount?: string;
     };
   };
   proxies: {
@@ -57,6 +58,7 @@ function load(filename: string): DataFile {
 const finalResult: {
   [key: string]: {
     title: string;
+    feedType: string;
     networks: {
       name: string;
       url: string;
@@ -67,7 +69,11 @@ const finalResult: {
 
 // Generate the data we need to serve
 for (let page of targetData) {
-  finalResult[page.page] = { title: page.title, networks: [] };
+  finalResult[page.page] = {
+    title: page.title,
+    feedType: page.feedType,
+    networks: []
+  };
 
   for (let network of page.networks) {
     const contents = load(network.source);
@@ -135,7 +141,7 @@ for (let page of targetData) {
           // End conditional
 
           proxyList.push({
-            pair: 
+            pair:
               // Only insert 'v1' if this isn't an index
               !/index/i.test(proxy.name) &&
               // Only insert 'v1' if this isn't already a versioned OHM
@@ -151,13 +157,16 @@ for (let page of targetData) {
     } else {
       for (let contractKey of Object.keys(contents.contracts)) {
         const contract = contents.contracts[contractKey];
-        proxyList.push({
-          pair: contract.name,
-          deviationThreshold: liveContracts[contractKey].deviationThreshold,
-          heartbeat: liveContracts[contractKey].heartbeat,
-          decimals: liveContracts[contractKey].decimals,
-          proxy: contractKey,
-        });
+        if (!contract.docsHidden) {
+          proxyList.push({
+            pair: contract.name,
+            deviationThreshold: liveContracts[contractKey].deviationThreshold,
+            heartbeat: liveContracts[contractKey].heartbeat,
+            decimals: liveContracts[contractKey].decimals,
+            // Use transmissionsAccount for Solana; contractKey otherwise
+            proxy: contract.transmissionsAccount || contractKey,
+          });
+        }
       }
     }
     // Save the data into our final output
