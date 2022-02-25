@@ -262,7 +262,7 @@ module.exports = {
             url: '/docs/chainlink-keepers/utility-contracts/'
           },
           {
-            title: 'Job Scheduler Beta',
+            title: 'Job Scheduler [BETA]',
             url: '/docs/chainlink-keepers/cron-contracts/'
           },
           {
