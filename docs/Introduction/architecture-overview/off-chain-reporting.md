@@ -22,7 +22,7 @@ The report contained in the aggregate transaction is signed by a quorum of oracl
 
 > 📘 A simple analogy
 >
-> Imagine ordering 10 items from an online store. Each item is packaged separately and posted separately, meaning postage and packaging costs must be applied to each one, and the carrier has to transport 10 different boxes.
+> Imagine ordering 10 items from an online store. Each item is packaged separately and posted separately, meaning postage and packaging costs must be applied to each one, and the carrier has to transport 10 different boxes. 
 >
 > OCR, on the other hand, packages all of these items into a single box and posts that. This saves postage and packaging fees and all effort the carrier associates with transporting 9 fewer boxes.
 
